@@ -8,7 +8,8 @@ var express        = require('express'),
 
 var User = require('./models/user');
 
-var routesController = require("./routes/controller");
+var indexRouter = require("./routes/index"),
+    userRouter = require("./routes/user");
 
 // --- Application configuration --- //
 app = express();
@@ -36,6 +37,7 @@ app.use(function(req, res, next){
 });
 
 // --- Routings --- //
-app.use("/", routesController);
+app.use("/", indexRouter);
+app.use("/users", userRouter);
 
 module.exports = app;
