@@ -26,6 +26,9 @@ router.get("/:username", function(req, res){
 });
 
 //User create
+router.get("/new", function(req, res){
+    res.render("user/new");
+});
 router.post("/", middleware.isAvailable, function(req, res){
     var _user = {
         email: req.body.user.email,
