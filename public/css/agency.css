@@ -5,6 +5,13 @@
  */
 @import url('https://fonts.googleapis.com/css?family=Roboto:900');
 
+#conditions {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.main-sect {
+  margin-top: -150px;
+}
 
 #hive {
   margin-top: 20px;
@@ -19,6 +26,7 @@ body {
 }
 .text-muted {
   color: #777777;
+  line-height: 1.25;
 }
 .text-primary {
   color: #fed136;
@@ -53,7 +61,6 @@ h4,
 h5,
 h6 {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
   font-weight: 700;
 }
 .img-centered {
@@ -239,7 +246,6 @@ fieldset[disabled] .btn-xl.active {
   }
 }
 header {
-  background-image: url('../img/header-bg.jpg');
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
