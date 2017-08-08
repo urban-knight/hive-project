@@ -12,8 +12,4 @@ router.get("/about", function(req, res){
     res.render("page/about");
 });
 
-router.get("/*", function(req, res){
-    res.render("404");
-});
-
 module.exports = router;

@@ -40,4 +40,8 @@ app.use(function(req, res, next){
 app.use("/", indexRouter);
 app.use("/users", userRouter);
 
+app.get("/*", function(req, res){
+    res.render("404");
+});
+
 module.exports = app;
