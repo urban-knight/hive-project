@@ -12,19 +12,6 @@ router.get("/", function(req, res){
     });
 });
 
-//User read
-router.get("/:username", function(req, res){
-    var _name = req.params.username;
-
-    User.findOne({username: _name}, function(err, user){
-        if (err) {
-            res.status(500).send({ error: "User " + _name + " not found. DB code: " + err });
-        } else {
-            res.render("user/show", {user: user});
-        }
-    });
-});
-
 //User create
 router.get("/new", function(req, res){
     res.render("user/new");
@@ -44,6 +31,19 @@ router.post("/", middleware.isAvailable, function(req, res){
         } else {
             console.log("User " + user.username + " created");
             res.redirect("/users/" + user.username);
+        }
+    });
+});
+
+//User read
+router.get("/:username", function(req, res){
+    var _name = req.params.username;
+
+    User.findOne({username: _name}, function(err, user){
+        if (err) {
+            res.status(500).send({ error: "User " + _name + " not found. DB code: " + err });
+        } else {
+            res.render("user/show", {user: user});
         }
     });
 });
