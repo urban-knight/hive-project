@@ -1,4 +1,6 @@
-var express  = require('express');
+var express    = require('express'),
+    passport   = require('passport'),
+    middleware = require("./../middleware");
 
 var router  = express.Router();
 
@@ -7,9 +9,24 @@ router.get("/", function(req, res){
     res.render("index");
 });
 
+// --- LOGIN SYSTEM --- //
+router.get("/login", function(req, res){
+    res.render("login");
+});
+router.post("/login", passport.authenticate("local", 
+    {
+        successRedirect: "/", 
+        failureRedirect: "/login"
+    }), function(req, res){
+});
+router.get("/logout", middleware.isLoggedIn, function(req, res){
+    req.logout();
+    res.redirect("/login");
+});
+
 // About page
 router.get("/about", function(req, res){
-    res.render("page/about");
+    res.render("about");
 });
 
 module.exports = router;
