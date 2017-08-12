@@ -1,1 +1,50 @@
-<h1>Login page template</h1>
+<% include ../partials/header %>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h1 style='margin-bottom: 30px; text-align: center;'>Авторизация</h1>
+  </div>
+  <div class="panel-body">
+    <form  class="form-horizontal" id="loginForm"  method="post">
+        <div class="form-group" >
+          <label for="name" class="col-sm-4 control-label">Имя пользователя:</label>
+          <div class="col-sm-6">
+           <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
+            <input type="text" name="userName" id="userName" class="form-control" placeholder="Имя пользователя" required>
+          </div>
+        </div>
+      </div>
+    <div class="form-group" >
+      <label for="password" class="col-sm-4 control-label">Пароль:</label>
+      <div class="col-sm-6">
+       <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-key" aria-hidden="true"></i></span>
+        <input type="password" id="password" name="password" class="form-control" required placeholder="Пароль">
+      </div>
+    </div>
+  </div>
+<div class="form-group">
+  <div class="col-sm-offset-4 col-sm-6">
+  <div class="form-check mb-2 mr-sm-2 mb-sm-0">
+    <label class="form-check-label">
+      <input class="form-check-input"  name="CheckBoxConfirm" id="CheckBoxConfirm"  type="checkbox" required> Запомеить меня
+    </label>
+  </div>
+   </div>
+</div>
+<div class="form-group">
+  <div class="col-sm-offset-4 col-sm-6">
+    <button id='submit' type="submit" class="btn btn-primary">Войти</button>
+  </div>
+</div>
+</form>
+</div>
+</div>
+
+
+<% include ../partials/footer %>
+<script    type="text/javascript" src="../static/lib/js/validator.js"></script>
+<script    type="text/javascript" src="../static/js/login.js"></script>
+
+
