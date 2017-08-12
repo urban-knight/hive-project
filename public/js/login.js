@@ -1,7 +1,7 @@
 ﻿
  $( document ).ready( function () {
 
-  $('#registrationForm').validate({
+  $('#loginForm').validate({
    rules: {
 
     userName: {
@@ -21,12 +21,16 @@
   messages: {
 
     userName: {
-		namecheck: "Имя должно состоять из букв верхнего и нижнего реестра а также цифр",
+		  namecheck: "Недопустимый формат имени",
       required: "Введите имя пользователя",
-      minlength: "Минимальная длинна имени - 4 символа"
+      minlength: "Минимальная длинна имени - 4 символа",
+      maxlength: "Максимальная длинна имени - 20 символов"
     },
     password: {
       pwcheck: "Недопустимый пароль",
+       required: "Введите пароль",
+        minlength: "Минимальная длинна пароля - 6 символов",
+      maxlength: "Максимальная длинна пароля - 16 символов"
     }
   },
   errorElement: 'span',
