@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <% include ../partials/header2 %>
 
     <div class="panel panel-default">
@@ -64,76 +64,3 @@
 <% include ../partials/footer %>
         <script type="text/javascript" src="../static/lib/js/validator.js"></script>
         <script type="text/javascript" src="../static/js/user/new.js"></script>
-=======
-<% include ../partials/header %>
-
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h1 style='margin-bottom: 30px;'>Регистрация нового пользователя</h1>
-  </div>
-  <div class="panel-body">
-    <form  class="form-horizontal" action="/users" id="registrationForm"  method="POST">
-        <div class="form-group" >
-          <label for="name" class="col-sm-4 control-label">Имя пользователя:</label>
-          <div class="col-sm-6">
-           <div class="input-group">
-            <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
-            <input type="text" name="user[username]" id="userName" class="form-control" placeholder="Имя пользователя" required>
-          </div>
-        </div>
-      </div>
-      <div class="form-group" >
-        <label for="email"  class="col-sm-4 control-label">Email:</label>
-        <div class="col-sm-6">
-         <div class="input-group">
-          <span class="input-group-addon"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
-          <input type="email" name="user[email]" id="email" class="form-control" placeholder="Адрес почтового ящика" required>
-        </div>
-      </div>
-    </div>
-    <div class="form-group" >
-      <label for="password" class="col-sm-4 control-label">Пароль:</label>
-      <div class="col-sm-6">
-       <div class="input-group">
-        <span class="input-group-addon"><i class="fa fa-key" aria-hidden="true"></i></span>
-        <input type="password" id="password" name="user[password]" class="form-control" required placeholder="Пароль">
-      </div>
-    </div>
-  </div>
-  <div class="form-group" >
-    <label for="password_confirm" class="col-sm-4 control-label">Повторите пароль:</label>
-    <div class="col-sm-6">
-     <div class="input-group">
-      <span class="input-group-addon"><i class="fa fa-key" aria-hidden="true"></i></span>
-      <input type="password" name="password_confirm" id="password_confirm" class="form-control" placeholder="Повторите пароль" required>
-    </div>
-  </div>
-</div>
-
-<div class="form-group">
-  <div class="col-sm-offset-4 col-sm-6">
-  <div class="form-check mb-2 mr-sm-2 mb-sm-0">
-    <label class="form-check-label">
-      <input class="form-check-input"  name="CheckBoxConfirm" id="CheckBoxConfirm"  type="checkbox" required> Я принимаю <a href="#">Правила использования</a>
-    </label>
-  </div>
-   </div>
-</div>
-
-
-<div class="form-group">
-  <div class="col-sm-offset-4 col-sm-6">
-    <button id='submit' type="submit" class="btn btn-primary">Регистрация</button>
-  </div>
-</div>
-</form>
-</div>
-</div>
-
-
-<% include ../partials/footer %>
-<script    type="text/javascript" src="../static/lib/js/validator.js"></script>
-<script    type="text/javascript" src="../static/js/user/new.js"></script>
-
-
->>>>>>> 744fb86b2be55ae39e125f6d79ae6cb4d06dae6c
