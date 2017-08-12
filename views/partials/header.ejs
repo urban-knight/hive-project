@@ -11,13 +11,14 @@
     <title>Hive Gaming</title>
     <link rel="shortcut icon" href="/static/img/logo.ico" type="image/x-icon">
     <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/swiper.min.css" rel="stylesheet">
     <link href="/static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-    <link href="/static/css/agency.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+    <link href="/static/css/agency.css" rel="stylesheet">
     <link rel="stylesheet" href="/static/css/reset.css">
     <link rel="stylesheet" href="/static/css/style.css">
     <title>Hive Gaming</title>
@@ -26,13 +27,16 @@
 <body>
     <header class="cd-header">
         <div id="cd-logo">
-            <a href="/"><img src="/static/img/logo.png" alt="Logo" width="80px" height="80px"></a>
+            <a href="/"><img src="/static/img/logo.svg" alt="Logo" width="80px" height="80px"></a>
         </div>
     </header>
     <section id="cd-intro">
         <div id="cd-intro-tagline">
             <h1 id="main-text" class="main-sect">ЗАЛЕТАЙ В HiVE!</h1>
-            <a href="http://codyhouse.co/?p=296" class="cd-btn btn">Присоединиться</a>
+            <a href="/users/new" class="cd-btn btn">Присоединиться</a>
+            <dev id="section03" class="demo">
+                <a href="#services" class="page-scroll"><span></span><span></span><span></span></a>
+            </dev>
         </div>
     </section>
 
@@ -41,25 +45,31 @@
         <nav>
             <ul>
                 <li>
-                    <a href="/library">
+                    <a href="/page/library.ejs">
                         <b>Библиотека</b>
                         <span><img src="/static/img/lib_ico.svg" alt="Logo" width="40px" height="40px"></span>
                     </a>
                 </li>
                 <li>
-                    <a href="/store">
+                    <a href="/page/store.ejs">
                         <b>Магазин</b>
                         <span><img src="/static/img/store_ico.svg" alt="Logo" width="40px" height="40px"></span>
                     </a>
                 </li>
                 <li>
-                    <a href="/project">
-                        <b>О Проекте</b>
-                        <span><img src="/static/img/about_ico.svg" alt="Logo" width="40px" height="40px"></span>
+                    <a href="/page/donate.ejs">
+                        <b>Донат</b>
+                        <span><img src="/static/img/donate_ico.svg" alt="Logo" width="40px" height="40px" href="/"></span>
                     </a>
                 </li>
                 <li>
-                    <a href="/support">
+                    <a href="/page/project.ejs">
+                        <b>О Проекте</b>
+                        <span><img src="/static/img/about_ico.svg" alt="Logo" width="40px" height="40px" href="/"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/page/support.ejs">
                         <b>Поддержка</b>
                         <span><img src="/static/img/support_ico.svg" alt="Logo" width="40px" height="40px"></span>
                     </a>
