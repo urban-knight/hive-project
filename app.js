@@ -3,6 +3,7 @@ var express        = require('express'),
     mongoose       = require('mongoose'),
     passport       = require('passport'),
     bodyParser     = require('body-parser'),
+    bcrypt         = require('bcrypt-nodejs'),
     LocalStrategy  = require('passport-local'),
     methodOverride = require('method-override');
     nev            = require('email-verification')(mongoose);
@@ -33,6 +34,14 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 // --- Email verification config --- //
+var myHasher = function(password, tempUserData, insertTempUser, callback) {
+  bcrypt.genSalt(8, function(err, salt) {
+    bcrypt.hash(password, salt, null, function(err, hash) {
+      return insertTempUser(hash, tempUserData, callback);
+    });
+  });
+};
+
 nev.configure({
     verificationURL: 'http://localhost/email-verification/${URL}',
     persistentUserModel: User,
@@ -50,7 +59,8 @@ nev.configure({
         subject: 'Please confirm account',
         html: 'Click the following link to confirm your account:</p><p>${URL}</p>',
         text: 'Please confirm your account by clicking the following link: ${URL}'
-    }
+    },
+    hashingFunction: myHasher,
 }, function(error, options){
 });
 nev.generateTempUserModel(User, function(err, model){

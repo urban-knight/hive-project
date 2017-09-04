@@ -5,30 +5,55 @@ var express    = require('express'),
 
 var router  = express.Router();
 
-//Temp User verification
-router.get("/:key", middleware.isAvailable, function(req, res){
-    nev.confirmTempUser(req.params.key, function(err, temp_user) {
-        if (err) {
-            // handle error...
-        } else {
-            
-            if (temp_user) {
-                // user was found!
-                User.register(temp_user, temp_user.password, function(err, user){
-                    if(err) {
-                        res.status(500).send({ error: "User " + user.username + " not created. DB code: " + err });
-                    } else {
-                        console.log("User "+ user.username +" verified");
-                        res.redirect("/login");
-                    }
-                });           
-            } else {
-                // user's data probably expired... 
-                res.redirect("register");
-            } 
-        }  
+//Users Index
+router.get("/", function(req, res){
+    User.find({}, function(err, users){
+        res.render("user/index", {users: users});
     });
 });
+
+//User create
+router.get("/new", function(req, res){
+    res.render("user/new");
+});
+router.post("/", middleware.isAvailable, function(req, res){
+    var _user = {
+        email: req.body.user.email,
+        password: req.body.user.password,
+        username: req.body.user.username,
+        userpic: req.body.user.userpic,
+        isOnline: false,
+        registered: Date.now(),
+    };
+
+    nev.createTempUser(_user, function(err, existingPersistentUser, newTempUser) {
+        if (err){
+            //error handling
+        } else {
+            if (existingPersistentUser){
+                // handle user's existence... violently. 
+            } else {
+                // a new user 
+                if (newTempUser) {
+                    var URL = newTempUser[nev.options.URLFieldName];
+                    nev.sendVerificationEmail(newTempUser.email, URL, function(err, info) {
+                        if (err){
+                            // handle error... 
+                        } else {
+                            // flash message of success
+                            console.log("Verification mail sent to " + newTempUser.email);
+                            res.redirect("/");
+                        }
+                    });
+                // user already exists in temporary collection... 
+                } else {
+                    // flash message of failure... 
+                }
+            }
+        }
+    });
+});
+
 
 //User read
 router.get("/:username", function(req, res){
