@@ -5,6 +5,7 @@ var express        = require('express'),
     bodyParser     = require('body-parser'),
     LocalStrategy  = require('passport-local'),
     methodOverride = require('method-override');
+    nev            = require('email-verification')(mongoose);
 
 var User = require('./models/user');
 
@@ -29,6 +30,35 @@ app.use(passport.session());
 passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
+
+// --- Email verification config --- //
+nev.configure({
+    verificationURL: 'http://hive-gaming.ga/email-verification/${URL}',
+    persistentUserModel: User,
+    tempUserCollection: 'temp_users',
+ 
+    transportOptions: {
+        service: 'Gmail',
+        auth: {
+            user: 'development.hive@gmail.com',
+            pass: 'BnBKGPbh'
+        }
+    },
+    verifyMailOptions: {
+        from: 'Do Not Reply <development.hive_do_not_reply@gmail.com>',
+        subject: 'Please confirm account',
+        html: 'Click the following link to confirm your account:</p><p>${URL}</p>',
+        text: 'Please confirm your account by clicking the following link: ${URL}'
+    }
+}, function(error, options){
+});
+nev.generateTempUserModel(User, function(err, model){
+    nev.configure({
+        tempUserModel: model
+    }, function(error, options){
+        if(error) console.log(error);
+    });
+});
 
 // --- Dynamic EJS-render data --- // 
 app.use(function(req, res, next){

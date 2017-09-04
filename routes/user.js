@@ -25,14 +25,40 @@ router.post("/", middleware.isAvailable, function(req, res){
         registered: Date.now(),
     };
 
-    User.register(_user, req.body.user.password, function(err, user){
-        if(err) {
-            res.status(500).send({ error: "User " + _user.username + " not created. DB code: " + err });
+    nev.createTempUser(_user, function(err, existingPersistentUser, newTempUser) {
+        if (err){
+
         } else {
-            console.log("User " + user.username + " created");
-            res.redirect("/users/" + user.username);
+            if (existingPersistentUser){
+                // handle user's existence... violently. 
+            } else {
+                // a new user 
+                if (newTempUser) {
+                    var URL = newTempUser[nev.options.URLFieldName];
+                    nev.sendVerificationEmail(newTempUser.email, URL, function(err, info) {
+                        if (err){
+                            // handle error... 
+                        } else {
+                            // flash message of success
+                            console.log("Verification mail sent to " + newTempUser.email);
+                            res.redirect("/");
+                        }
+                    });
+                // user already exists in temporary collection... 
+                } else {
+                    // flash message of failure... 
+                }
+            }
         }
     });
+
+    // User.register(_user, req.body.user.password, function(err, user){
+    //     if(err) {
+    //         res.status(500).send({ error: "User " + _user.username + " not created. DB code: " + err });
+    //     } else {
+
+    //     }
+    // });
 });
 
 //User read
