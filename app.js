@@ -10,7 +10,8 @@ var express        = require('express'),
 var User = require('./models/user');
 
 var indexRouter = require("./routes/index"),
-    userRouter = require("./routes/user");
+    userRouter = require("./routes/user"),
+    emailVerificator = require("./routes/email-verificator");
 
 // --- Application configuration --- //
 app = express();
@@ -33,7 +34,7 @@ passport.deserializeUser(User.deserializeUser());
 
 // --- Email verification config --- //
 nev.configure({
-    verificationURL: 'http://hive-gaming.ga/email-verification/${URL}',
+    verificationURL: 'http://localhost/email-verification/${URL}',
     persistentUserModel: User,
     tempUserCollection: 'temp_users',
  
@@ -69,6 +70,7 @@ app.use(function(req, res, next){
 // --- Routings --- //
 app.use("/", indexRouter);
 app.use("/users", userRouter);
+app.use("/email-verification", emailVerificator);
 
 app.get("/*", function(req, res){
     res.render("404");
