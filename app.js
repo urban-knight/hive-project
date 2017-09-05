@@ -3,16 +3,13 @@ var express        = require('express'),
     mongoose       = require('mongoose'),
     passport       = require('passport'),
     bodyParser     = require('body-parser'),
-    bcrypt         = require('bcrypt-nodejs'),
     LocalStrategy  = require('passport-local'),
     methodOverride = require('method-override');
-    nev            = require('email-verification')(mongoose);
 
 var User = require('./models/user');
 
 var indexRouter = require("./routes/index"),
-    userRouter = require("./routes/user"),
-    emailVerificator = require("./routes/email-verificator");
+    userRouter = require("./routes/user");
 
 // --- Application configuration --- //
 app = express();
@@ -33,44 +30,6 @@ passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-// --- Email verification config --- //
-var myHasher = function(password, tempUserData, insertTempUser, callback) {
-  bcrypt.genSalt(8, function(err, salt) {
-    bcrypt.hash(password, salt, null, function(err, hash) {
-      return insertTempUser(hash, tempUserData, callback);
-    });
-  });
-};
-
-nev.configure({
-    verificationURL: 'http://localhost/email-verification/${URL}',
-    persistentUserModel: User,
-    tempUserCollection: 'temp_users',
- 
-    transportOptions: {
-        service: 'Gmail',
-        auth: {
-            user: 'development.hive@gmail.com',
-            pass: 'BnBKGPbh'
-        }
-    },
-    verifyMailOptions: {
-        from: 'Do Not Reply <development.hive_do_not_reply@gmail.com>',
-        subject: 'Please confirm account',
-        html: 'Click the following link to confirm your account:</p><p>${URL}</p>',
-        text: 'Please confirm your account by clicking the following link: ${URL}'
-    },
-    hashingFunction: myHasher,
-}, function(error, options){
-});
-nev.generateTempUserModel(User, function(err, model){
-    nev.configure({
-        tempUserModel: model
-    }, function(error, options){
-        if(error) console.log(error);
-    });
-});
-
 // --- Dynamic EJS-render data --- // 
 app.use(function(req, res, next){
     res.locals.currentUser = req.user;
@@ -80,7 +39,6 @@ app.use(function(req, res, next){
 // --- Routings --- //
 app.use("/", indexRouter);
 app.use("/users", userRouter);
-app.use("/email-verification", emailVerificator);
 
 app.get("/*", function(req, res){
     res.render("404");

@@ -24,9 +24,15 @@ router.get("/logout", middleware.isLoggedIn, function(req, res){
     res.redirect("/login");
 });
 
-// About page
-router.get("/about", function(req, res){
-    res.render("about");
+// Project page
+router.get("/project", function(req, res){
+    res.render("project");
 });
+
+// Support page
+router.get("/support", function(req, res){
+    res.render("support");
+});
+
 
 module.exports = router;

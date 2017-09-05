@@ -1,79 +1,66 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <meta http-equiv="Content-Type" content="application/xhtml+xml">
     <title>Hive Gaming</title>
-    <link rel="shortcut icon" href="/static/img/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/static/lib/owl.carousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="/static/lib/owl.carousel/dist/assets/owl.theme.default.min.css">
     <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/static/css/swiper.min.css" rel="stylesheet">
     <link href="/static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
-    <link href="/static/css/agency.css" rel="stylesheet">
-    <link rel="stylesheet" href="/static/css/reset.css">
-    <link rel="stylesheet" href="/static/css/style.css">
-    <title>Hive Gaming</title>
+    <link href="/static/css/style.css" rel="stylesheet">
+    <link href="/static/css/structure.css" rel="stylesheet">
 </head>
 
-<body>
-    <header class="cd-header">
-        <div id="cd-logo">
-            <a href="/"><img src="/static/img/logo.svg" alt="Logo" width="80px" height="80px"></a>
+<body id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span><i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="/"><img id="logo" src="/static/img/logo.svg" width="72px" height="72px"></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/library">Библиотека</a>
+                    </li>
+                    <li>
+                        <a href="/store">Магазин</a>
+                    </li>
+                    <li>
+                        <a href="/donate">Донат</a>
+                    </li>
+                    <li>
+                        <a href="/project">О Проекте</a>
+                    </li>
+                    <li>
+                        <a href="/support">Поддержка</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-heading">Залетай в HiVE</div>
+                <a href="/users/new" class="btn btn-xl">Присоединиться</a>
+            </div>
         </div>
     </header>
-    <section id="cd-intro">
-        <div id="cd-intro-tagline">
-            <h1 id="main-text" class="main-sect">ЗАЛЕТАЙ В HiVE!</h1>
-            <a href="/users/new" class="cd-btn btn">Присоединиться</a>
-            <dev id="section03" class="demo">
-                <a href="#services" class="page-scroll"><span></span><span></span><span></span></a>
-            </dev>
-        </div>
-    </section>
 
-    <div class="cd-secondary-nav">
-        <a href="/" class="cd-secondary-nav-trigger">Menu<span></span></a>
-        <nav>
-            <ul>
-                <li>
-                    <a href="/page/library.ejs">
-                        <b>Библиотека</b>
-                        <span><img src="/static/img/lib_ico.svg" alt="Logo" width="40px" height="40px"></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/page/store.ejs">
-                        <b>Магазин</b>
-                        <span><img src="/static/img/store_ico.svg" alt="Logo" width="40px" height="40px"></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/page/donate.ejs">
-                        <b>Донат</b>
-                        <span><img src="/static/img/donate_ico.svg" alt="Logo" width="40px" height="40px" href="/"></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/page/project.ejs">
-                        <b>О Проекте</b>
-                        <span><img src="/static/img/about_ico.svg" alt="Logo" width="40px" height="40px" href="/"></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/page/support.ejs">
-                        <b>Поддержка</b>
-                        <span><img src="/static/img/support_ico.svg" alt="Logo" width="40px" height="40px"></span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </div>
+ 
