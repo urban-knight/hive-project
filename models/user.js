@@ -6,6 +6,7 @@ var UserSchema = mongoose.Schema({
     password: String,
     username: String,
     userpic: String,
+    country: { type: String, default: 'none' },
     isOnline: { type: Boolean, default: false },
     registered: { type: Date, default: Date.now },
     friends: [
