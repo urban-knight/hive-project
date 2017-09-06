@@ -7,13 +7,13 @@
         <div class="panel-heading">
             <h1>Регистрация нового пользователя</h1>
         </div>
-            <form class="form-horizontal" id="registrationForm" method="post">
+            <form action="/users" class="form-horizontal" id="registrationForm" method="post">
                 <div class="form-group">
                     <label for="name" class="col-sm-4 control-label">Имя пользователя:</label>
                     <div class="col-sm-6">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
-                            <input type="text" name="userName" id="userName" class="form-control" placeholder="Имя пользователя" required>
+                            <input type="text" name="user[username]" id="userName" class="form-control" placeholder="Имя пользователя" required>
                         </div>
                     </div>
                 </div>
@@ -22,7 +22,7 @@
                     <div class="col-sm-6">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
-                            <input type="email" name="email" id="email" class="form-control" placeholder="Адрес почтового ящика" required>
+                            <input type="email" name="user[email]" id="email" class="form-control" placeholder="Адрес почтового ящика" required>
                         </div>
                     </div>
                 </div>
@@ -31,7 +31,7 @@
                     <div class="col-sm-6">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-key" aria-hidden="true"></i></span>
-                            <input type="password" id="password" name="password" class="form-control" required placeholder="Пароль">
+                            <input type="password" id="password" name="user[password]" class="form-control" required placeholder="Пароль">
                         </div>
                     </div>
                 </div>
