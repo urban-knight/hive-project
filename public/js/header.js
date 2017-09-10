@@ -3,7 +3,8 @@ $(document).ready(function(){
     e.preventDefault();
     $( '#' + $(this).data('modal-id') ).modal();
   });
-    $('#loginForm').validate({
+
+  $('#loginForm').validate({
    rules: {
     "user[userName]": {
       namecheck: true,
@@ -59,4 +60,4 @@ $(document).ready(function(){
    return /^[A-Za-z0-9\d=!\-@._*]*$/.test(value) // consists of only these
        && /[a-z]/.test(value) // has a lowercase letter
      });
-})
+});

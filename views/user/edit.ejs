@@ -1,12 +1,11 @@
-
-<% include ../partials/header2 %>
-    <div  style="margin-top:130px;">
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h1 style='margin-bottom: 30px; text-align: center;'>Редактирование профиля</h1>
-  </div>
-  <div class="panel-body">
-    <form  class="form-horizontal" action="/users" id="registrationForm"  method="POST">
+<% include ../partials/header %>
+<div  style="margin-top:130px;">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h1 style='margin-bottom: 30px; text-align: center;'>Редактирование профиля</h1>
+    </div>
+    <div class="panel-body">
+      <form  class="form-horizontal" action="/users" id="registrationForm"  method="POST">
 
 
         <div class="form-group" >
@@ -27,38 +26,33 @@
         </div>
       </div>
     </div>
-          <div class="form-group" >
-        <label for="email"  class="col-sm-4 control-label">Повторите Ваш Email:</label>
-        <div class="col-sm-6">
-         <div class="input-group">
-          <span class="input-group-addon"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
-          <input type="email" name="user[email]" id="email" class="form-control" value="<%=user.email %>" placeholder="Адрес почтового ящика" required>
-        </div>
-      </div>
-    </div>
     <div class="form-group" >
-      <label for="password" class="col-sm-4 control-label">Пароль:</label>
+      <label for="email"  class="col-sm-4 control-label">Повторите Ваш Email:</label>
       <div class="col-sm-6">
        <div class="input-group">
-        <span class="input-group-addon"><i class="fa fa-key" aria-hidden="true"></i></span>
-        <input type="password" id="password" name="user[password]" class="form-control"  required placeholder="Пароль">
+        <span class="input-group-addon"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+        <input type="email" name="user[email]" id="email" class="form-control" value="<%=user.email %>" placeholder="Адрес почтового ящика" required>
       </div>
     </div>
   </div>
   <div class="form-group" >
-    <label for="password_confirm" class="col-sm-4 control-label">Повторите пароль:</label>
+    <label for="password" class="col-sm-4 control-label">Пароль:</label>
     <div class="col-sm-6">
      <div class="input-group">
       <span class="input-group-addon"><i class="fa fa-key" aria-hidden="true"></i></span>
-      <input type="password" name="password_confirm" id="password_confirm" class="form-control"  placeholder="Повторите пароль" required>
+      <input type="password" id="password" name="user[password]" class="form-control"  required placeholder="Пароль">
     </div>
   </div>
 </div>
-
-
-
-
-
+<div class="form-group" >
+  <label for="password_confirm" class="col-sm-4 control-label">Повторите пароль:</label>
+  <div class="col-sm-6">
+   <div class="input-group">
+    <span class="input-group-addon"><i class="fa fa-key" aria-hidden="true"></i></span>
+    <input type="password" name="password_confirm" id="password_confirm" class="form-control"  placeholder="Повторите пароль" required>
+  </div>
+</div>
+</div>
 <div class="form-group">
   <div class="col-sm-offset-4 col-sm-6">
     <button id='submit' type="submit" class="btn btn-primary">Сохранить изменения</button>
@@ -67,8 +61,6 @@
 </form>
 </div>
 </div>
-
-
 <% include ../partials/footer %>
 <script    type="text/javascript" src="../static/lib/jQueryValidator/validator.js"></script>
 <script    type="text/javascript" src="../static/js/user/new.js"></script>
