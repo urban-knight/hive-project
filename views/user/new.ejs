@@ -2,9 +2,8 @@
 <link href="/static/lib/intl-tel-input/build/css/intlTelInput.css" rel="stylesheet">
 <section class="registration">
   <div class="row">
-    <div class="col-lg-7"  id="reg-form">
+    <div class="col-lg-7" style="border-right: 3px solid #333333;"  id="reg-form">
       <h1>Регистрация нового пользователя</h1>
-
       <form action="/users" class="form-horizontal" id="registrationForm" method="post">
         <div class="form-group">
           <label for="name" class="col-sm-4 control-label">Имя:</label>
@@ -78,16 +77,14 @@
         <div class="form-group">
           <label class="col-sm-4 control-label">Имя пользователя:</label>
           <div class="col-sm-7">
-            <input type="text" name="user[username]" id="userName" class="form-control"
-            placeholder="Имя пользователя" required>
+            <input type="text" name="user[userName]" id="loginUserName" class="form-control" placeholder="Имя пользователя" required>
           </div>
         </div>
 
         <div class="form-group">
           <label class="col-sm-4 control-label">Пароль:</label>
           <div class="col-sm-7">
-            <input type="password" id="password" name="user[password]" class="form-control" required
-            placeholder="Пароль">
+            <input type="password" id="loginPassword" name="user[password]" class="form-control" required placeholder="Пароль">
           </div>
         </div>
         <div class="form-group">
@@ -110,7 +107,6 @@
     </div>
   </div>
 </section>
-
 <% include ../partials/footer %>
 <script type="text/javascript" src="../static/lib/js/validator.js"></script>
 <script type="text/javascript" src="../static/js/user/new.js"></script>

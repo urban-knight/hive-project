@@ -761,7 +761,10 @@ div.selected-flag {
   background: rgba(0,0,0,0.4);
 }
 /* Custom autofill styles */
-input:-webkit-autofill,
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    background-color: rgb(64, 64, 64);
+  }
+ input:-webkit-autofill,
 input:-webkit-autofill,
 textarea:-webkit-autofill,
 textarea:-webkit-autofill:hover
@@ -769,7 +772,7 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-  background: #444;
+  background: #444 !important;
   color: #888;
   -webkit-text-fill-color: #888;
   transition: background-color 5000s ease-in-out 0s;
