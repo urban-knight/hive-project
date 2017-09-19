@@ -34,5 +34,9 @@ router.get("/support", function(req, res){
     res.render("support");
 });
 
+// Library page
+router.get("/library", function(req, res){
+    res.render("library");
+});
 
 module.exports = router;
