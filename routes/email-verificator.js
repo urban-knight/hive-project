@@ -14,12 +14,11 @@ router.get("/:key", function(req, res){
         } else {     
             if (user) {
                 console.log("User " + user.username + " verified.");
-                res.redirect("/login");
             } else {
                 // user's data probably expired... 
                 // redirect to sign-up
-                res.redirect("/users/new");
             }
+            res.redirect("/users/new");
         }
     });
 });

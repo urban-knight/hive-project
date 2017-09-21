@@ -1,12 +1,14 @@
-var express        = require('express'),
+var fs             = require('fs'),
+    express        = require('express'),
     dataBase       = require('./db.js'),
     mongoose       = require('mongoose'),
     passport       = require('passport'),
     bodyParser     = require('body-parser'),
     bcrypt         = require('bcrypt-nodejs'),
+    flash          = require('connect-flash'),
     LocalStrategy  = require('passport-local'),
     methodOverride = require('method-override');
-    nev            = require('email-verification')(mongoose);
+    nev            = require('./email-verification')(mongoose);
 
 var User = require('./models/user');
 
@@ -20,6 +22,7 @@ app.use(bodyParser.urlencoded({extended: true}))
 app.set("view engine", "ejs");
 app.use('/static', express.static(__dirname + "/public"));
 app.use(methodOverride("_method"));
+app.use(flash());
 
 // --- PassportJS configuration --- //
 app.use(require("express-session")({
@@ -34,35 +37,6 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 // --- Email verification config --- //
-var myHasher = function(password, tempUserData, insertTempUser, callback) {
-  bcrypt.genSalt(8, function(err, salt) {
-    bcrypt.hash(password, salt, null, function(err, hash) {
-      return insertTempUser(hash, tempUserData, callback);
-    });
-  });
-};
-
-nev.configure({
-    verificationURL: 'http://localhost/email-verification/${URL}',
-    persistentUserModel: User,
-    tempUserCollection: 'temp_users',
- 
-    transportOptions: {
-        service: 'Gmail',
-        auth: {
-            user: 'development.hive@gmail.com',
-            pass: 'BnBKGPbh'
-        }
-    },
-    verifyMailOptions: {
-        from: 'Do Not Reply <development.hive_do_not_reply@gmail.com>',
-        subject: 'Please confirm account',
-        html: 'Click the following link to confirm your account:</p><p>${URL}</p>',
-        text: 'Please confirm your account by clicking the following link: ${URL}'
-    },
-    hashingFunction: myHasher,
-}, function(error, options){
-});
 nev.generateTempUserModel(User, function(err, model){
     nev.configure({
         tempUserModel: model
@@ -74,6 +48,8 @@ nev.generateTempUserModel(User, function(err, model){
 // --- Dynamic EJS-render data --- // 
 app.use(function(req, res, next){
     res.locals.currentUser = req.user;
+    res.locals.error = req.flash("error");
+    res.locals.success = req.flash("success");
     next();
 });
 

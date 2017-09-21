@@ -20,7 +20,7 @@ router.post("/", middleware.isAvailable, function(req, res){
     var _user = {
         email: req.body.user.email,
         password: req.body.user.password,
-        username: req.body.user.username,
+        username: req.body.user.userName,
         userpic: req.body.user.userpic,
         isOnline: false,
         registered: Date.now(),

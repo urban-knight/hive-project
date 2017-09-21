@@ -16,7 +16,8 @@ router.get("/login", function(req, res){
 router.post("/login", passport.authenticate("local", 
     {
         successRedirect: "/", 
-        failureRedirect: "/login"
+        failureRedirect: "/users/new",
+        failureFlash: true
     }), function(req, res){
 });
 router.get("/logout", middleware.isLoggedIn, function(req, res){

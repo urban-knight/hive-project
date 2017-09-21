@@ -17,17 +17,16 @@
     "Hive",
     "Project"
   ],
-  "author": "Hive Devs Team",
+  "author": "Hive Team",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/urban-knight/hive-project/issues"
   },
   "homepage": "https://github.com/urban-knight/hive-project#readme",
   "dependencies": {
-    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.17.2",
+    "connect-flash": "^0.1.1",
     "ejs": "^2.5.7",
-    "email-verification": "^0.4.6",
     "express": "^4.15.3",
     "express-session": "^1.15.5",
     "method-override": "^2.3.9",
