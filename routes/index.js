@@ -13,13 +13,24 @@ router.get("/", function(req, res){
 router.get("/login", function(req, res){
     res.render("login");
 });
-router.post("/login", passport.authenticate("local", 
-    {
-        successRedirect: "/", 
-        failureRedirect: "/users/new",
-        failureFlash: true
-    }), function(req, res){
+router.post("/login", function(req, res, next) {
+    if (req.body.remember_me == "on"){
+        var expired = 2592000000; //30 days
+        req.session.cookie.expires = new Date(Date.now() + expired)
+        req.session.cookie.maxAge = expired;
+    } else {
+        req.session.cookie.expires = false;
+    }
+    passport.authenticate('local', function(err, user, info) {
+      if (err) { return next(err); }
+      if (!user) { return res.redirect('/login'); }
+      req.logIn(user, function(err) {
+        if (err) { return next(err); }
+        return res.redirect('/');
+      });
+    })(req, res, next);
 });
+
 router.get("/logout", middleware.isLoggedIn, function(req, res){
     req.logout();
     res.redirect("/login");

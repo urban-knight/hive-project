@@ -1,13 +1,15 @@
 var fs             = require('fs'),
     express        = require('express'),
-    dataBase       = require('./db.js'),
+    db             = require('./db.js'),
     mongoose       = require('mongoose'),
     passport       = require('passport'),
     bodyParser     = require('body-parser'),
-    bcrypt         = require('bcrypt-nodejs'),
+    cookieParser   = require('cookie-parser'),
     flash          = require('connect-flash'),
+    session        = require("express-session"),
     LocalStrategy  = require('passport-local'),
-    methodOverride = require('method-override');
+    methodOverride = require('method-override'),
+    MongoStore     = require('connect-mongo')(session),
     nev            = require('./email-verification')(mongoose);
 
 var User = require('./models/user');
@@ -18,17 +20,23 @@ var indexRouter = require("./routes/index"),
 
 // --- Application configuration --- //
 app = express();
-app.use(bodyParser.urlencoded({extended: true}))
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(cookieParser());
 app.set("view engine", "ejs");
 app.use('/static', express.static(__dirname + "/public"));
 app.use(methodOverride("_method"));
 app.use(flash());
 
 // --- PassportJS configuration --- //
-app.use(require("express-session")({
+app.use(session({
     secret: "encrypt",
     resave: false,
-    saveUninitialized: false
+    saveUninitialized: false,
+    store: new MongoStore({ 
+        mongooseConnection: db,
+        touchAfter: 24 * 60 * 60
+    }),
+    
 }));
 app.use(passport.initialize());
 app.use(passport.session());
@@ -53,7 +61,6 @@ app.use(function(req, res, next){
     next();
 });
 
-// --- Routings --- //
 app.use("/", indexRouter);
 app.use("/users", userRouter);
 app.use("/email-verification", emailVerificator);
