@@ -1,0 +1,49 @@
+<% include ./../partials/header %>
+<section class="content-block" style="background: #333; border-radius: 10px;  margin-top:150px; padding: 20px" >
+
+  <div class="row">
+    <div class="col-sm-3" style="top: -50px;  width: 22%;">
+      <img width="200" src="/static/img/backgrounds/pepe.png" class="img-responsive img-circle img-thumbnail" >
+      <br><br>
+    <a class="btn btn-primary" href="user/edit"><i class="fa fa-pencil" aria-hidden="true"></i> Редактировать профиль</a>
+
+
+    </div>
+    <div class="col-sm-9">
+      <h1 style="text-align: left; margin: 0; padding: 0; font-size: 36pt; border-bottom:1px dotted #fff;"><%=user.username %></h1>
+      <p>Мамкін бандіт</p><a style="right: 0; top: 0; position: absolute;" href="/logout"><i class="fa fa-sign-out" aria-hidden="true"></i> Выход</a>
+    </div>
+    </div>
+
+  <div class="row">
+     <div class="col-sm-3" style="width: 22%;">
+<div class="panel panel-default">
+  <div class="panel-heading">Мои друзья</div>
+  <div class="panel-body">
+
+  <div class="row">
+                <div class="col-md-6">
+                        <img width='40' src="/static/img/team/kuznets.jpg" class="img-responsive img-circle">
+                        <p>Oleg</p>
+                    </div>
+<div class="col-md-6">
+                        <img width='40' src="/static/img/team/kuznets.jpg" class="img-responsive img-circle">
+                        <p>OlegKuznets</p>
+                    </div><div class="col-md-6">
+                        <img width='40' src="/static/img/team/kuznets.jpg" class="img-responsive img-circle">
+                        <p>OlegKuznets</p>
+                    </div><div class="col-md-6">
+                        <img width='40' src="/static/img/team/kuznets.jpg" class="img-responsive img-circle">
+                        <p>OlegKuznets</p>
+                    </div>
+                </div>
+
+  </div>
+</div>
+    </div>
+  </div>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br>
+</section>
+
+<% include ./../partials/footer %>

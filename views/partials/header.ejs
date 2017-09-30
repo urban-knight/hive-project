@@ -44,7 +44,11 @@
                         <a href="/support">Поддержка</a>
                     </li>
                      <li>
-                        <a class="launch-modal" href="#" alt="Войти" data-modal-id="modal-register" style="font-size:20px"><i class="fa fa-sign-in" aria-hidden="true"></i></a>
+                       <% if(!currentUser){ %>
+                            <a class="launch-modal" href="#" alt="Войти" data-modal-id="modal-register" style="font-size:20px"><i class="fa fa-sign-in" aria-hidden="true"></i></a>
+                        <% } else { %>
+                            <a href="/users/<%= currentUser.username %>"><%= currentUser.username %></a>
+                        <% } %>
                     </li>
                 </ul>
             </div>
@@ -64,19 +68,19 @@
         <p>Быстрый доступ к данным Вашего аккаунта:</p>
       </div>
       <div class="modal-body">
-        <form role="form" action="" method="post" id="loginForm" class="registration-form">
+        <form role="form" action="/login" method="post" id="loginForm" class="registration-form">
          <div class="form-group">
-          <input type="text" name="user[userName]" id="userName" class="form-control"
+          <input type="text" name="username" id="userName" class="form-control"
           placeholder="Имя пользователя" required>
         </div>
         <div class="form-group">
-          <input type="password" id="password" name="user[password]" class="form-control" required
+          <input type="password" id="password" name="password" class="form-control" required
           placeholder="Пароль">
         </div>
         <div class="form-group">
           <div class="checkbox">
             <label for="saveMe">
-              <input type="checkbox" name="saveMe"  /> Запомнить меня
+              <input type="checkbox" name="remember_me"> Запомнить меня
             </label>
           </div>
         </div>

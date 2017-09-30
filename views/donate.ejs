@@ -1,43 +1,50 @@
 <% include ./partials/header %>
-
-    <section class="registration">
-        <div class=id="reg-form">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Игровая Библиотека</h2>
-                </div>
-                <div class="container">
-                    <div class="container col-lg-4">
-                        <img src="/static/img/library/mta-grasp.png" width="300px" height="300px">
-                    </div>
-                    <div class="container-library col-lg-8">
-                        <p class="game-name">Multi Theft Auto: <span class="grasp">Grasp</span></p>
-                            <p class="game-description">Легендарная GTA: San Andreas теперь онлайн! Мы предлагаем Вам открытые уличные разборки, море оружия и большой выбор транспорта. Полное описание игровых возможностей данной сборки вы можете прочитать перейдя по ссылке снизу</p>
-                        <div class="lib-border2"></div>
-                            <p class="game-req">Системные требования: <span class="fine">CPU</span> - Intel Pentium 4 +, <span class="fine">RAM</span> - 512 MB +, <span class="fine">Video</span> - 128 MB + Radeon/nVidia, <span class="fine">HDD</span> - 4 GB +</p>
-                        <div class="lib-border2"></div>
-                            <a href="#" class="play-game btn btn-primary">Играть</a>
-                            <a href="/library/mta" class="dsc-btn btn btn-primary">Описание</a>
-                    </div>
-                </div>
-                 <div class="lib-border"></div>
-                <div class="container">
-                    <div class="container col-lg-4">
-                        <img src="/static/img/library/hivecraft.png" width="300px" height="300px">
-                    </div>
-                    <div class="container-library col-lg-8">
-                        <p class="game-name"><span class="hivecraft">Hive</span>Craft</p>
-                            <p class="game-description">Кастомная сборка популярной во всем мире песочницы. Вас ждет уникальный инвентарь, настоящая битва за выживание и море экшена! Полное описание игровых возможностей данной сборки <a href="#">"Здесь"</a></p>
-                        <div class="lib-border2"></div>
-                            <p class="game-req">Системные требования: <span class="fine">CPU</span> - Intel Pentium 4 +, <span class="fine">RAM</span> - 1 GB +, <span class="fine">Video</span> - 64 MB + Radeon/nVidia, <span class="fine">HDD</span> - 500 МB +</p>
-                        <div class="lib-border2"></div>
-                            <a href="#" class="play-game btn btn-primary">Играть</a>
-                            <a href="/library/hivecraft" class="dsc-btn btn btn-primary">Описание</a>
-                    </div>
-                </div>
-            </div>
+<section class="form-box" style="width:70%">
+  <div class="row">
+    <div class="col-lg-12">
+      <h2 class="section-heading">Покупка внутриигровой валюты</h2>
+    </div>
+    <form  class="form-horizontal form-bordered" id="donate">
+      <div class="form-group" style="margin-bottom: 0">
+        <label for="name" class="col-sm-4 control-label">Имя пользователя:</label>
+        <div class="col-sm-6">
+          <input type="text" name="username" id="username" class="form-control" placeholder="Имя пользователя" value="<%=currentUser.username %>" required readonly>
         </div>
-    </section>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-4 col-sm-6">
+          <div class="checkbox">
+            <label for="gift">
+              <input type="checkbox" id="gift">Сделать перевод для другого пользователя</label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+         <label for="name" class="col-sm-4 control-label">Выберете суму доната и валюту:</label>
+         <div class="col-sm-6">
+          <div class="input-group" style="width: 100%">
+            <input type="number" id="money" name="money" placeholder="Сумма" class="form-control" style="width:30%">
+            <select class="form-control" id="curr" style="width:30%">
+              <option value="10">₽ RUB</option>
+              <option value="30">₴ UAH</option>
+              <option value="300">€ EUR</option>
+              <option value="250">$ USD</option>
+            </select>
 
+            <input type="number" id="virtualMoney"  class="form-control" placeholder="Игровая валюта"  style="width:40%" readonly >
+          </div>
+        </div>
+      </div>
+      <div class="form-group" style="margin-top: 20px;">
+        <div class="col-sm-offset-4 col-sm-6">
+          <button id='submit' type="submit" class="btn btn-primary"><i class="fa fa-credit-card" aria-hidden="true"></i> Перейти к оплате</button>
+        </div>
+      </div>
 
-    <% include ./partials/footer %>
+    </form>
+  </div>
+
+</section>
+<% include ./partials/footer %>
+<script type="text/javascript" src="../static/js/donate.js"></script>
+<script type="text/javascript">var name = "<%=currentUser.username %>" ;</script>
