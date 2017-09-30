@@ -1,15 +1,17 @@
 var fs             = require('fs'),
-    express        = require('express'),
+    express        = require('express'), 
     db             = require('./db.js'),
     mongoose       = require('mongoose'),
     passport       = require('passport'),
     bodyParser     = require('body-parser'),
     cookieParser   = require('cookie-parser'),
     flash          = require('connect-flash'),
-    session        = require("express-session"),
     LocalStrategy  = require('passport-local'),
+    session        = require("express-session"),
     methodOverride = require('method-override'),
-    MongoStore     = require('connect-mongo')(session),
+    app            = express(),
+    http           = require('http').Server(app),
+    MongoStore     = require('connect-mongo')(session);
     nev            = require('./email-verification')(mongoose);
 
 var User = require('./models/user');
@@ -19,7 +21,6 @@ var indexRouter = require("./routes/index"),
     emailVerificator = require("./routes/email-verificator");
 
 // --- Application configuration --- //
-app = express();
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(cookieParser());
 app.set("view engine", "ejs");
@@ -27,16 +28,18 @@ app.use('/static', express.static(__dirname + "/public"));
 app.use(methodOverride("_method"));
 app.use(flash());
 
+// --- Session storage in MongoDB --- //
+var sessionStore = new MongoStore({ 
+    mongooseConnection: db,
+    touchAfter: 24 * 60 * 60
+});
+
 // --- PassportJS configuration --- //
 app.use(session({
     secret: "encrypt",
     resave: false,
     saveUninitialized: false,
-    store: new MongoStore({ 
-        mongooseConnection: db,
-        touchAfter: 24 * 60 * 60
-    }),
-    
+    store: sessionStore,
 }));
 app.use(passport.initialize());
 app.use(passport.session());
@@ -69,4 +72,7 @@ app.get("/*", function(req, res){
     res.render("404");
 });
 
-module.exports = app;
+// --- Socket.IO setup --- //
+var io = require('./utils/socket-io')(http, sessionStore, passport);
+
+module.exports = http;

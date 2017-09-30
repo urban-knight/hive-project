@@ -5,9 +5,15 @@ var UserSchema = mongoose.Schema({
     email: String,
     password: String,
     username: String,
+    firstName: String,
+    lastName: String,
+    mobile: Number,
     userpic: String,
     country: { type: String, default: 'none' },
-    isOnline: { type: Boolean, default: false },
+    socket: {
+        isConnected: { type: Boolean, default: false },
+        isOnline: { type: Boolean, default: false }
+    },
     registered: { type: Date, default: Date.now },
     friends: [
         {
