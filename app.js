@@ -9,6 +9,7 @@ var fs             = require('fs'),
     LocalStrategy  = require('passport-local'),
     session        = require("express-session"),
     methodOverride = require('method-override'),
+    subdomain      = require('express-subdomain'),
     app            = express(),
     http           = require('http').Server(app),
     MongoStore     = require('connect-mongo')(session);
@@ -19,6 +20,8 @@ var User = require('./models/user');
 var indexRouter = require("./routes/index"),
     userRouter = require("./routes/user"),
     emailVerificator = require("./routes/email-verificator");
+
+var indexAPI = require("./routes/api/index");
 
 // --- Application configuration --- //
 app.use(bodyParser.urlencoded({extended: true}));
@@ -71,6 +74,8 @@ app.use("/email-verification", emailVerificator);
 app.get("/*", function(req, res){
     res.render("404");
 });
+
+app.use(subdomain('api', indexAPI));
 
 // --- Socket.IO setup --- //
 var io = require('./utils/socket-io')(http, sessionStore, passport);
