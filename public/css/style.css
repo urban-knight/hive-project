@@ -517,7 +517,7 @@ section#contact .text-danger {
 }
 footer {
 
-  min-height: 200px;
+  height: 200px;
   padding: 25px 0;
   text-align: center;
   background-color: #191716
@@ -607,7 +607,7 @@ body {
     margin: 120px 100px;
   }
   .form-box {
-    margin: 120px auto;
+    margin: 120px auto 0 auto;
     width: 50%;
   }
 
@@ -1247,4 +1247,9 @@ a#wline {
 
 #tile-box {
   padding-left: 55px;
+}
+
+
+.page-body{
+  min-height: calc(100vh - 100px);
 }
