@@ -1,17 +1,21 @@
-<% include ./partials/header %>
-<section id="error-page">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="text-center">
-                        <div class="err404">
-                            <img class="img-responsive" id="e404" src="/static/img/404.png" alt="">
-                            <h2 id="page-not-found">Страница не найдена!</h2>
-                            <a class="btn btn-xl" href="/">На Главную</a>
+<% include ./../partials/header %>
+        <section class="error-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-5">
+                        <i class="fa fa-exclamation-triangle"></i>
+                    </div>
+                    
+                    <div class="col-sm-7">
+                        <div class="error-info">
+                            <h1 class="mb-30">404</h1>
+                            <span class="error-sub">Ой! Что-то пошло не так!</span>
+
+                            <p>Похоже что данная страница отсутствует!</p>
+                            <a class="btn btn-lg waves-effect waves-light" href="/">На Главную</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-</section>
-<% include ./partials/footer %>
+        </section>
+<% include ./../partials/footer %>

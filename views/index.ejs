@@ -1,265 +1,436 @@
 <!DOCTYPE html>
 <html lang="ru">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Hive Gaming</title>
-    <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <meta name="description" content="materialize is a material design restaurant template">
+    <meta name="keywords" content="restaurant, coffee, business, parallax, creative, agency">
+    <meta name="author" content="trendytheme.net">
+
+    <title>Hive-Gaming</title>
+
+    <!--  favicon -->
+    <link rel="shortcut icon" href="/static/img/ico/mmlogo.png">
+
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,500,700,900' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+    <!-- Material Icons CSS -->
+    <link href="/static/fonts/iconfont/material-icons.css" rel="stylesheet">
+    <!-- FontAwesome CSS -->
+    <link href="/static/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- magnific-popup -->
+    <link href="/static/magnific-popup/magnific-popup.css" rel="stylesheet">
+    <!-- flexslider -->
+    <link href="/static/flexSlider/flexslider.css" rel="stylesheet">
+    <!-- materialize -->
+    <link href="/static/materialize/css/materialize.min.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- shortcodes -->
+    <link href="/static/css/shortcodes/shortcodes.css" rel="stylesheet">
+    <!-- Main Style CSS -->
     <link href="/static/css/style.css" rel="stylesheet">
-    <link href="/static/css/structure.css" rel="stylesheet">
-    <link href="/static/css/lightbox.css" rel="stylesheet">
+
+    <link href="/static/css/skins/coffeeshop.css" rel="stylesheet">
+
+    <!-- owl.carousel -->
+    <link href="/static/owl.carousel/assets/owl.carousel.css" rel="stylesheet">
+    <link href="/static/owl.carousel/assets/owl.theme.default.min.css" rel="stylesheet">
+    <!-- flexslider -->
+    <link href="/static/flexSlider/flexslider.css" rel="stylesheet">
+    <link href="/static/css/shortcodes/login.css" rel="stylesheet">
+
 </head>
 
-<body id="page-top" class="index">
+<body id="top" class="has-header-search" data-spy="scroll" data-target="#materialize-menu" data-offset="100">
 
-    <!-- Navigation -->
-    <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span><i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand page-scroll" href="/"><img id="logo" src="/static/img/logo.svg" width="72px" height="72px"></a>
-            </div>
+    <!--header start-->
+    <header id="header" class="tt-nav transparent-header nav-border-bottom">
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="/library">Библиотека</a>
-                    </li>
-                    <li>
-                        <a href="/store">Магазин</a>
-                    </li>
-                    <li>
-                        <a href="/donate">Донат</a>
-                    </li>
-                    <li>
-                        <a href="/project">О Проекте</a>
-                    </li>
-                    <li>
-                        <a href="/support">Поддержка</a>
-                    </li>
-                    <li>
-                        <% if(!currentUser){ %>
-                            <a class="launch-modal" href="#" alt="Войти" data-modal-id="modal-register" style="font-size:20px"><i class="fa fa-sign-in" aria-hidden="true"></i></a>
-                        <% } else { %>
-                            <a href="/users/<%= currentUser.username %>"><%= currentUser.username %></a>
-                        <% } %>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="intro-text">
-                <div class="intro-heading">Залетай в HiVE</div>
-                <a href="/users/new" class="btn btn-xl">Присоединиться</a>
+        <div class="header-sticky light-header">
+
+            <div class="container">
+
+                <div class="search-wrapper">
+                    <div class="search-trigger light pull-right">
+                        <div class='search-btn'></div>
+                        <i class="material-icons">&#xE8B6;</i>
+                    </div>
+                    <!-- Modal Search Form -->
+                    <i class="search-close material-icons">&#xE5CD;</i>
+                    <div class="search-form-wrapper">
+                        <form action="#" class="white-form">
+                            <div class="container text-center">
+                                <h1 class="intro-title font-greatvibes white-text">Вход на сайт</h1>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" name="search" id="search">
+                                <label for="search" class="">Логин</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" name="search" id="search">
+                                <label for="search" class="">Пароль</label>
+                            </div>
+                            <div class="input-field">
+                                <button class="btn pink waves-effect waves-light btn-login" type="submit">Войти</button>
+                                <p class="reg-link">Если вы ещё не <a href="/users/new" class="reg-link2">зарегистрированы</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- /.search-wrapper -->
+
+                <div id="materialize-menu" class="menuzord">
+
+                    <!--logo start-->
+                    <a href="/" data-scroll class="logo-brand">
+                        <img src="/static/img/coffee/logo-main.png" alt="" class="img-responsive">
+                    </a>
+                    <!--logo end-->
+
+                    <!-- onepage menu start-->
+                    <ul class="nav menuzord-menu pull-right op-nav light">
+                        <li>
+                            <a href="/library">Библиотека</a>
+                        </li>
+                        <li>
+                            <a href="/store">Магазин</a>
+                        </li>
+                        <li>
+                            <a href="/donate">Донат</a>
+                        </li>
+                        <li>
+                            <a href="/project">О Проекте</a>
+                        </li>
+                        <li>
+                            <a href="/support">Поддержка</a>
+                        </li>
+                    </ul>
+                    <!-- onepage menu end-->
+
+                </div>
             </div>
         </div>
     </header>
-    <!-- MODAL -->
-    <div class="modal fade" id="modal-register" tabindex="-1" role="dialog" aria-labelledby="modal-register-label" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">
-              <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-          </button>
-          <h3 class="modal-title" id="modal-register-label">Войти</h3>
-          <p>Быстрый доступ к данным Вашего аккаунта:</p>
-      </div>
-      <div class="modal-body">
-        <form role="form" action="/login" method="post" class="registration-form">
-           <div class="form-group">
-              <input type="text" name="username" id="userName" class="form-control"
-              placeholder="Имя пользователя" required>
-          </div>
-          <div class="form-group">
-              <input type="password" id="password" name="user[password]" class="form-control" required
-              placeholder="Пароль">
-          </div>
-          <div class="form-group">
-              <div class="checkbox">
-                <label for="saveMe">
-                  <input type="checkbox" name="remember_me"> Запомнить меня
-              </label>
-          </div>
-      </div>
-      <div class="form-group">
-        <button id='submit' type="submit" class="btn btn-primary">Вход</button>
-    </div>
-    <div class="form-group">
-           <p>Нет аккаунта? <a href="/users/new">Зарегестрироваться сейчас!</a></p>
-        </div>
-</form>
-</div>
-</div>
-</div>
-</div>
-<body style="background-image: none;">
-<!--Section 1: Services-->
-<section id="services">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="section-heading">Что мы предлагаем</h2>
-            </div>
-        </div>
-        <div class="row text-center">
-            <div class="col-md-4">
-                <span class="fa-stack fa-4x">
-                    <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                    <i class="fa fa-dollar fa-stack-1x fa-inverse"></i>
-                </span>
-                <h4 class="service-heading">Зарабатывай</h4>
-                <p class="text-muted">Играя в любимые игры, ты не только с удовольствием проводишь время но и зарабатываешь игровые деньги!</p>
-            </div>
-            <div class="col-md-4">
-                <span class="fa-stack fa-4x">
-                    <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                    <i class="fa fa-users fa-stack-1x fa-inverse"></i>
-                </span>
-                <h4 class="service-heading">Играй с Друзьми</h4>
-                <p class="text-muted">Теперь ты будешь покорять игровой мир вместе с друзьями. Добавляй в друзьй и дерзай!</p>
-            </div>
-            <div class="col-md-4">
-                <span class="fa-stack fa-4x">
-                    <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                    <i class="fa fa-trophy fa-stack-1x fa-inverse"></i>
-                </span>
-                <h4 class="service-heading">Получай Достижения</h4>
-                <p class="text-muted">Твоё потраченое время не уйдет даром! У нас есть реальный дроп вещей, розыгрыши, достижения и многое другое!</p>
-            </div>
-        </div>
-    </div>
-</section>
+    <!--header end-->
 
-    <!--Carousel-->
-    <section id="gallery">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Галерея Проекта</h2>
-                </div>
+    <!-- Hero Section -->
+    <section id="home" class="coffee-banner-1 bg-fixed parallax-bg overlay dark-7 fullscreen-banner valign-wrapper" data-stellar-background-ratio="0.5">
+        <div class="valign-cell">
+            <div class="container text-center padding-top-110">
+                <h1 class="intro-title font-greatvibes white-text">Добро Пожаловать</h1>
+                <h3 class="width-60 white-text mb-50 section-title text-capitalize white-text">Включай | Играй | Зарабатывай</h3>
+                <a href="/users/new" class="page-scroll btn btn-lg text-capitalize waves-effect waves-dark">Присоединится</a>
             </div>
-            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- /.container -->
+        </div>
+        <!-- /.valign-cell -->
+    </section>
+    <!-- Hero Section End -->
+
+    <section id="about" class="section-padding">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-6 mb-sm-50">
+
+                    <img src="/static/img/coffee/store.png" alt="" class="img-responsive">
+                </div>
+                <!-- /.col-md-6 -->
+
+                <div class="col-md-6">
+                    <h2 class="font-40 mb-30 welcome-title">Мы рады приветствовать Вас на Hive-Gaming</h2>
+                    <p>Улётный игровой процесс, удобный геймплей, море фишок и многое другое ждёт Вас именно здесь! Мы рады Вам представить удобную экосистему сделаную на базе современных ресурсов. Вам будет доступна библиотека популярных игр во всём мире, магазин уникального а также премиального инвентаря, вся статистика Вашего аккаунта, поддержка 24/7 а главное возможность самому заработать игровую валюту на сервисе! Мы проработали для Вас систему для удобной игры с друзьми, единой валюты на серверах а также море разных фишек! Включай, регистрируйся и играй именно здесь! Ты не пожалеешь!</p>
+                </div>
+                <!-- /.col-md-6 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+    <section class="section-padding-adv coffee-banner-2 bg-fixed parallax-bg" data-stellar-background-ratio="0.5">
+        <div class="container">
+
+            <div class="text-center mb-80">
+                <h2 class="section-title text-capitalize white-text">Достоинства</h2>
+            </div>
+
+            <div class="featured-carousel brand-dot">
+                <div class="featured-item border-box radius-4 hover brand-hover">
+                    <div class="icon mb-30">
+                        <i class="material-icons brand-icon">attach_money</i>
+                    </div>
+                    <div class="desc">
+                        <h2>Зарабатывай</h2>
+                        <p>Играя в любимые игры, ты не только с удовольствием проводишь время но и зарабатываешь игровые деньги!</p>
+                    </div>
+                </div>
+                <!-- /.featured-item -->
+
+                <div class="featured-item border-box radius-4 hover brand-hover">
+                    <div class="icon mb-30">
+                        <i class="material-icons brand-icon">people</i>
+                    </div>
+                    <div class="desc">
+                        <h2>Играй с Друзьми</h2>
+                        <p>Теперь ты будешь покорять игровой мир вместе с друзьями. Добавляй в друзьй и дерзай!</p>
+                    </div>
+                </div>
+                <!-- /.featured-item -->
+
+                <div class="featured-item border-box radius-4 hover brand-hover">
+                    <div class="icon mb-30">
+                        <i class="material-icons brand-icon">star</i>
+                    </div>
+                    <div class="desc">
+                        <h2>Получай Достижения</h2>
+                        <p>Твоё потраченое время не уйдет даром! У нас есть реальный дроп вещей, розыгрыши, достижения и многое другое!</p>
+                    </div>
+                </div>
+                <!-- /.featured-item -->
+
+                <div class="featured-item border-box radius-4 hover brand-hover">
+                    <div class="icon mb-30">
+                        <i class="material-icons brand-icon">local_grocery_store</i>
+                    </div>
+                    <div class="desc">
+                        <h2>Делай Покупки</h2>
+                        <p>Мы рады представить магазин крутых а также премиальных вещей, где ты сможешь приобрести то что тебе нравиться!</p>
+                    </div>
+                </div>
+                <!-- /.featured-item -->
+
+                <div class="featured-item border-box radius-4 hover brand-hover">
+                    <div class="icon mb-30">
+                        <i class="material-icons brand-icon">casino</i>
+                    </div>
+                    <div class="desc">
+                        <h2>Участвуй в Розыгрышах</h2>
+                        <p>Для самых активных пользователей мы приготовим участие в постоянных розыгрышах!</p>
+                    </div>
+                </div>
+                <!-- /.featured-item -->
+
+                <div class="featured-item border-box radius-4 hover brand-hover">
+                    <div class="icon mb-30">
+                        <i class="material-icons brand-icon">&#xE8DC;</i>
+                    </div>
+                    <div class="desc">
+                        <h2>Соревнуйся</h2>
+                        <p>Стань лучшим из лучших и будь одним из первых в рейтинге! Лучшие игроки неотменно будут награждены!</p>
+                    </div>
+                </div>
+                <!-- /.featured-item -->
+            </div>
+
+        </div>
+        <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+    <section class="section-padding grid-news-hover gray-bg">
+        <div class="container">
+
+            <div class="text-center mb-80">
+                <h2 class="news-title">Последние Новости</h2>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <article class="post-wrapper">
+
+                        <div class="thumb-wrapper waves-effect waves-block waves-light">
+                            <a href="/news"><img src="/static/img/coffee/store.png" class="img-responsive" alt=""></a>
+                            <div class="post-date">
+                                1<span>Jan</span>
+                            </div>
+                        </div>
+                        <!-- .post-thumb -->
+
+                        <div class="blog-content">
+
+                            <div class="hover-overlay brand-bg"></div>
+
+                            <header class="entry-header-wrapper">
+                                <div class="entry-header">
+                                    <h2 class="entry-title"><a href="/news-detalis">Hive-Gaming Release v.1.0b Warthy Wardog</a></h2>
+
+                                    <div class="entry-meta">
+                                        <ul class="list-inline">
+                                            <li>
+                                                <a href="#">Администрация</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Hive-Gaming</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- .entry-meta -->
+                                </div>
+                                <!-- /.entry-header -->
+                            </header>
+                            <!-- /.entry-header-wrapper -->
+
+                            <div class="entry-content">
+                                <p>Наступил долгожданный релиз! Кратко: добавлен лаунчер, 2 игры в библиотеку, сбор статистики</p>
+                            </div>
+                            <!-- .entry-content -->
+
+                        </div>
+                        <!-- /.blog-content -->
+
+                    </article>
+                    <!-- /.post-wrapper -->
+                </div>
+                <!-- /.col-md-4 -->
+
+                <div class="col-md-4">
+                    <article class="post-wrapper">
+
+                        <div class="thumb-wrapper waves-effect waves-block waves-light">
+                            <a href="#"><img src="/static/img/coffee/store.png" class="img-responsive" alt=""></a>
+                            <div class="post-date">
+                                1<span>Jan</span>
+                            </div>
+                        </div>
+                        <!-- .post-thumb -->
+
+                        <div class="blog-content">
+
+                            <div class="hover-overlay brand-bg"></div>
+
+                            <header class="entry-header-wrapper">
+                                <div class="entry-header">
+                                    <h2 class="entry-title"><a href="#">Hive-Gaming Release v.1.0b Warthy Wardog</a></h2>
+
+                                    <div class="entry-meta">
+                                        <ul class="list-inline">
+                                            <li>
+                                                <a href="#">Администрация</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Hive-Gaming</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- .entry-meta -->
+                                </div>
+                                <!-- /.entry-header -->
+                            </header>
+                            <!-- /.entry-header-wrapper -->
+
+                            <div class="entry-content">
+                                <p>Наступил долгожданный релиз! Кратко: добавлен лаунчер, 2 игры в библиотеку, сбор статистики</p>
+                            </div>
+                            <!-- .entry-content -->
+
+                        </div>
+                        <!-- /.blog-content -->
+
+                    </article>
+                    <!-- /.post-wrapper -->
+                </div>
+                <!-- /.col-md-4 -->
+
+                <div class="col-md-4">
+                    <article class="post-wrapper">
+
+                        <div class="thumb-wrapper waves-effect waves-block waves-light">
+                            <a href="#"><img src="/static/img/coffee/store.png" class="img-responsive" alt=""></a>
+                            <div class="post-date">
+                                1<span>Jan</span>
+                            </div>
+                        </div>
+                        <!-- .post-thumb -->
+
+                        <div class="blog-content">
+
+                            <div class="hover-overlay brand-bg"></div>
+
+                            <header class="entry-header-wrapper">
+                                <div class="entry-header">
+                                    <h2 class="entry-title"><a href="#">Hive-Gaming Release v.1.0b Warthy Wardog</a></h2>
+
+                                    <div class="entry-meta">
+                                        <ul class="list-inline">
+                                            <li>
+                                                <a href="#">Администрация</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Hive-Gaming</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- .entry-meta -->
+                                </div>
+                                <!-- /.entry-header -->
+                            </header>
+                            <!-- /.entry-header-wrapper -->
+
+                            <div class="entry-content">
+                                <p>Наступил долгожданный релиз! Кратко: добавлен лаунчер, 2 игры в библиотеку, сбор статистики</p>
+                            </div>
+                            <!-- .entry-content -->
+
+                        </div>
+                        <!-- /.blog-content -->
+
+                    </article>
+                    <!-- /.post-wrapper -->
+                </div>
+                <!-- /.col-md-4 -->
+
+            </div>
+            <!-- /.row -->
+
+        </div>
+        <!-- /.container -->
+    </section>
+
+    <section class="section-padding-gallery">
+        <div class="container">
+
+            <div class="text-center mb-80">
+                <h2 class="gallery-title text-uppercase">Галерея Скриншотов</h2>
+            </div>
+
+            <div id="project-slider" class="carousel slide boot-slider" data-ride="carousel">
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#project-slider" data-slide-to="0" class="active"></li>
+                    <li data-target="#project-slider" data-slide-to="1"></li>
+                    <li data-target="#project-slider" data-slide-to="2"></li>
                 </ol>
 
                 <!-- Wrapper for slides -->
-                <div class="carousel-inner">
+                <div class="carousel-inner" role="listbox">
                     <div class="item active">
-                        <img src="/static/img/carousel/slide_1.png" alt="Los Angeles" width="100%">
+                        <img class="img-responsive" src="/static/img/portfolio/single-project-1.jpg" alt="">
                     </div>
-
                     <div class="item">
-                        <img src="/static/img/carousel/slide_1.png" alt="Los Angeles" width="100%">
+                        <img class="img-responsive" src="/static/img/portfolio/single-project-2.jpg" alt="">
                     </div>
-
                     <div class="item">
-                        <img src="/static/img/carousel/slide_1.png" alt="Los Angeles" width="100%">
+                        <img class="img-responsive" src="/static/img/portfolio/single-project-3.jpg" alt="">
                     </div>
                 </div>
 
-                <!-- Left and right controls -->
-                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left"></span>
+                <!-- Controls -->
+                <a class="left carousel-control" href="#project-slider" role="button" data-slide="prev">
+                    <span class="fa fa-angle-left" aria-hidden="true"></span>
                     <span class="sr-only">Previous</span>
                 </a>
-                <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right"></span>
+                <a class="right carousel-control" href="#project-slider" role="button" data-slide="next">
+                    <span class="fa fa-angle-right" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                 </a>
             </div>
         </div>
     </section>
 
-    <section id="gallery">
-        <div class="container" id="newsbar">
-            <div class="col-lg-12 text-center">
-                <h2 class="section-heading">Новости</h2>
-            </div>
-            <div class="row margin-b-30">
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                    <div class="box london">
-                        <div class="box-icon">
-                            <img src="/static/img/news/stuff_img1.png" alt="Image" class="img-responsive">
-                        </div>
-                        <div class="info float-container">
-                            <div class="col-sm-12 news-date">
-                                <p class="london-title">ЯНВ 1</p>
-                                <h3 class="text-uppercase news-title">Hive Gaming</h3>
-                            </div>
-                            <p>Добро Пожаловать! Мы рады Вам представить наш продукт, который поможет Вам удобно и с комфортом проводить время за любимыми играми!</p>
-                            <div class="col-sm-12 location-main">
-                                <div class="pull-right user-icons">
-                                    <a href="/news" class="news-btn btn btn-primary">Подробно</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                    <div class="box london">
-                        <div class="box-icon">
-                            <img src="/static/img/news/stuff_img1.png" alt="Image" class="img-responsive">
-                        </div>
-                        <div class="info float-container">
-                            <div class="col-sm-12 news-date">
-                                <p class="london-title">ЯНВ 1</p>
-                                <h3 class="text-uppercase news-title">Hive Gaming</h3>
-                            </div>
-                            <p>Добро Пожаловать! Мы рады Вам представить наш продукт, который поможет Вам удобно и с комфортом проводить время за любимыми играми!</p>
-                            <div class="col-sm-12 location-main">
-                                <div class="pull-right user-icons">
-                                    <a href="/news" class="news-btn btn btn-primary">Подробно</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                    <div class="box london">
-                        <div class="box-icon">
-                            <img src="/static/img/news/stuff_img1.png" alt="Image" class="img-responsive">
-                        </div>
-                        <div class="info float-container">
-                            <div class="col-sm-12">
-                                <p class="london-title">ЯНВ 1</p>
-                                <h3 class="text-uppercase news-title">Hive Gaming</h3>
-                            </div>
-                            <p>Добро Пожаловать! Мы рады Вам представить наш продукт, который поможет Вам удобно и с комфортом проводить время за любимыми играми!</p>
-                            <div class="col-sm-12 location-main">
-                                <div class="pull-right user-icons">
-                                    <a href="/news" class="news-btn btn btn-primary">Подробно</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </section>
-</body>
-
     <% include ./partials/footer %>
-        <script>
-            //Modals
-            $('.launch-modal').on('click', function(e) {
-                e.preventDefault();
-                $('#' + $(this).data('modal-id')).modal();
-            });
-        </script>

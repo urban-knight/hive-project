@@ -51,4 +51,34 @@ router.get("/library", function(req, res){
     res.render("library");
 });
 
+// Store page
+router.get("/store", function(req, res){
+    res.render("store");
+});
+
+// News page
+router.get("/news", function(req, res){
+    res.render("news");
+});
+
+// News-detalis page
+router.get("/news-detalis", function(req, res){
+    res.render("news-detalis");
+});
+
+// MTA page
+router.get("/mta", function(req, res){
+    res.render("mta");
+});
+
+// HiveCraft page
+router.get("/hivecraft", function(req, res){
+    res.render("hivecraft");
+});
+
+// Donate page
+router.get("/donate", function(req, res){
+    res.render("donate");
+});
+
 module.exports = router;

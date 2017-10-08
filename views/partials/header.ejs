@@ -1,102 +1,124 @@
 <!DOCTYPE html>
 <html lang="ru">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Hive Gaming</title>
-    <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <meta name="description" content="materialize is a material design restaurant template">
+    <meta name="keywords" content="restaurant, coffee, business, parallax, creative, agency">
+    <meta name="author" content="trendytheme.net">
+
+    <title>Hive-Gaming</title>
+
+    <!--  favicon -->
+    <link rel="shortcut icon" href="/static/img/ico/mmlogo.png">
+
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,500,700,900' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+    <!-- Material Icons CSS -->
+    <link href="/static/fonts/iconfont/material-icons.css" rel="stylesheet">
+    <!-- FontAwesome CSS -->
+    <link href="/static/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- magnific-popup -->
+    <link href="/static/magnific-popup/magnific-popup.css" rel="stylesheet">
+    <!-- flexslider -->
+    <link href="/static/flexSlider/flexslider.css" rel="stylesheet">
+    <!-- materialize -->
+    <link href="/static/materialize/css/materialize.min.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- shortcodes -->
+    <link href="/static/css/shortcodes/shortcodes.css" rel="stylesheet">
+    <!-- Main Style CSS -->
     <link href="/static/css/style.css" rel="stylesheet">
+
+    <link href="/static/css/skins/coffeeshop.css" rel="stylesheet">
+
+    <!-- owl.carousel -->
+    <link href="/static/owl.carousel//static/owl.carousel.css" rel="stylesheet">
+    <link href="/static/owl.carousel//static/owl.theme.default.min.css" rel="stylesheet">
+    <!-- flexslider -->
+    <link href="/static/flexSlider/flexslider.css" rel="stylesheet">
+    <link href="/static/css/shortcodes/login.css" rel="stylesheet">
+
+    <!-- RS5.0 Main Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="/static/revolution/css/settings.css">
+    <!-- RS5.0 Layers and Navigation Styles -->
+    <link rel="stylesheet" type="text/css" href="/static/revolution/css/layers.css">
+    <link rel="stylesheet" type="text/css" href="/static/revolution/css/navigation.css">
+
 </head>
 
-<body id="page-top" class="index">
+<body id="top" class="has-header-search" data-spy="scroll" data-target="#materialize-menu" data-offset="100">
 
-    <!-- Navigation -->
-    <nav id="mainNav" class="navbar navbar-default navbar-custom2 navbar-fixed-top">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span><i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand page-scroll" href="/"><img id="logo2" src="/static/img/logo.svg" width="72px" height="72px"></a>
+    <!--header start-->
+    <header id="header" class="navbar-fixed-top navbar-color">
+
+        <div class="header-sticky light-header">
+
+            <div class="container">
+
+                <div class="search-wrapper">
+                    <div class="search-trigger light pull-right">
+                        <div class='search-btn'></div>
+                        <i class="material-icons">&#xE8B6;</i>
+                    </div>
+                    <!-- Modal Search Form -->
+                    <i class="search-close material-icons">&#xE5CD;</i>
+                    <div class="search-form-wrapper">
+                        <form action="#" class="white-form">
+                            <div class="container text-center">
+                                <h1 class="intro-title font-greatvibes white-text">Вход на сайт</h1>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" name="search" id="search">
+                                <label for="search" class="">Логин</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" name="search" id="search">
+                                <label for="search" class="">Пароль</label>
+                            </div>
+                            <div class="input-field">
+                                <button class="btn pink waves-effect waves-light btn-login" type="submit">Войти</button>
+                                <p class="reg-link">Если вы ещё не <a href="/" class="reg-link2">зарегистрированы</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- /.search-wrapper -->
+
+                <div id="materialize-menu" class="menuzord">
+
+                    <!--logo start-->
+                    <a href="/" class="logo-brand">
+                        <img src="/static/img/coffee/logo-main.png" alt="" class="img-responsive">
+                    </a>
+                    <!--logo end-->
+
+                    <!-- onepage menu start-->
+                    <ul class="nav menuzord-menu pull-right op-nav light">
+                        <li>
+                            <a href="/library">Библиотека</a>
+                        </li>
+                        <li>
+                            <a href="/store">Магазин</a>
+                        </li>
+                        <li>
+                            <a href="/donate">Донат</a>
+                        </li>
+                        <li>
+                            <a href="/project">О Проекте</a>
+                        </li>
+                        <li>
+                            <a href="/support">Поддержка</a>
+                        </li>
+                    </ul>
+                    <!-- onepage menu end-->
+
+                </div>
             </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="/library">Библиотека</a>
-                    </li>
-                    <li>
-                        <a href="/store">Магазин</a>
-                    </li>
-                    <li>
-                        <a href="/donate">Донат</a>
-                    </li>
-                    <li>
-                        <a href="/project">О Проекте</a>
-                    </li>
-                    <li>
-                        <a href="/support">Поддержка</a>
-                    </li>
-                     <li>
-                       <% if(!currentUser){ %>
-                            <a class="launch-modal" href="#" alt="Войти" data-modal-id="modal-register" style="font-size:20px"><i class="fa fa-sign-in" aria-hidden="true"></i></a>
-                        <% } else { %>
-                            <a href="/users/<%= currentUser.username %>"><%= currentUser.username %></a>
-                        <% } %>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container-fluid -->
-    </nav>
-    <!-- MODAL -->
-<div class="modal fade" id="modal-register" tabindex="-1" role="dialog" aria-labelledby="modal-register-label" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">
-          <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-        </button>
-        <h3 class="modal-title" id="modal-register-label">Войти</h3>
-        <p>Быстрый доступ к данным Вашего аккаунта:</p>
-      </div>
-      <div class="modal-body">
-        <form role="form" action="/login" method="post" id="loginForm" class="registration-form">
-         <div class="form-group">
-          <input type="text" name="username" id="userName" class="form-control"
-          placeholder="Имя пользователя" required>
-        </div>
-        <div class="form-group">
-          <input type="password" id="password" name="password" class="form-control" required
-          placeholder="Пароль">
-        </div>
-        <div class="form-group">
-          <div class="checkbox">
-            <label for="saveMe">
-              <input type="checkbox" name="remember_me"> Запомнить меня
-            </label>
-          </div>
-        </div>
-        <div class="form-group">
-            <button id='submit' type="submit" class="btn btn-primary">Вход</button>
-        </div>
-          <div class="form-group">
-           <p>Нет аккаунта? <a href="/users/new">Зарегестрироваться сейчас!</a></p>
-        </div>
-
-      </form>
-    </div>
-  </div>
-</div>
-</div>
-
-
-
-
+    </header>
+    <!--header end-->
