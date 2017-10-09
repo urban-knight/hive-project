@@ -67,8 +67,7 @@ Social Link Widget
 }
 
 .social-link li a i:hover {
-    color: #03a9f4 ;
-    background: #fff;
+    color: #ffba08 ;
 }
 
 .social-link.dark li a i{
@@ -295,7 +294,7 @@ Footer 4
 .footer-four .social-link li a i{
     width: 40px;
     height: 40px;
-    font-size: 18px;
+    font-size: 24px;
     line-height: 40px;
     color: #fff;
     -webkit-transform: translateZ(0);
