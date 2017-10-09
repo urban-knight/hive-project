@@ -15,8 +15,9 @@ input[type=tel],
 input[type=number], 
 input[type=search], 
 textarea.materialize-textarea {
-    border-bottom: 1px solid #9b9b9b;
-    font-size: 14px !important;
+    border-bottom: 1px solid #dee8e6;
+    font-size: 18px !important;
+    color: #dee8e6;
 }
 
 input[type=text]:focus:not([readonly]), 
@@ -30,8 +31,7 @@ input[type=tel]:focus:not([readonly]),
 input[type=number]:focus:not([readonly]), 
 input[type=search]:focus:not([readonly]), 
 textarea.materialize-textarea:focus:not([readonly]) {
-    border-bottom: 1px solid #03a9f4;
-    box-shadow: 0 1px 0 0 #03a9f4; 
+    border-bottom: 1px solid #ffba08;
 }
 
 input[type=text]:focus:not([readonly]) + label, 
@@ -45,7 +45,7 @@ input[type=tel]:focus:not([readonly]) + label,
 input[type=number]:focus:not([readonly]) + label, 
 input[type=search]:focus:not([readonly]) + label, 
 textarea.materialize-textarea:focus:not([readonly]) + label {
-    color: #03a9f4 !important; 
+    color: #ffba08 !important; 
 }
 
 textarea.materialize-textarea {
@@ -69,23 +69,9 @@ White Form Style
 .white-form input[type=search], 
 .white-form textarea.materialize-textarea {
     color: #fff;
-    border-bottom: 1px solid #fff;
 }
 
-.white-form input[type=text]:focus:not([readonly]), 
-.white-form input[type=password]:focus:not([readonly]), 
-.white-form input[type=email]:focus:not([readonly]), 
-.white-form input[type=url]:focus:not([readonly]), 
-.white-form input[type=time]:focus:not([readonly]), 
-.white-form input[type=date]:focus:not([readonly]), 
-.white-form input[type=datetime-local]:focus:not([readonly]), 
-.white-form input[type=tel]:focus:not([readonly]), 
-.white-form input[type=number]:focus:not([readonly]), 
-.white-form input[type=search]:focus:not([readonly]), 
-.white-form textarea.materialize-textarea:focus:not([readonly]) {
-    border-bottom: 1px solid #fff;
-    box-shadow: 0 1px 0 0 #fff; 
-}
+
 
 .white-form .input-field label,
 .white-form input[type=text]:focus:not([readonly]) + label, 

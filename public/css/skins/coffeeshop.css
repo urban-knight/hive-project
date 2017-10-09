@@ -157,20 +157,27 @@ a:hover {
 background banner images
 ------------------------------------------------------------*/
 .coffee-banner-1 {
-    background-image: url("../../img/coffee/coffee-banner-1.jpg");  
-    
+    background-image: url("../../img/index/gta-banner-1.jpg");  
+}
+
+.donate-banner-1 {
+    background-image: url("../../img/index/donate-img.jpg");   
+}
+
+.register-banner-1 {
+    background-image: url("../../img/index/register-banner.jpg");   
 }
 
 .coffee-banner-2 {
-    background-image: url("../../img/coffee/coffee-banner-2.jpg");
+    background-image: url("../../img/index/minecraft-banner-2.jpg");
 }
 
 .coffee-banner-3 {
-    background-image: url("../../img/coffee/coffee-banner-3.jpg");  
+    background-image: url("../../img/index/coffee-banner-3.jpg");  
 }
 
 .coffee-banner-4 {
-    background-image: url("../../img/coffee/coffee-banner-4.jpg");  
+    background-image: url("../../img/index/coffee-banner-4.jpg");  
 }
 
 

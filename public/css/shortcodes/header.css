@@ -322,7 +322,7 @@ header.sticky .menuzord-menu>li>a,
 .menuzord-menu>li>a {
     display: inline-block;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: normal;
     outline: 0;
     -webkit-tap-highlight-color: transparent

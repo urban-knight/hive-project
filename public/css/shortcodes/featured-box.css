@@ -412,7 +412,8 @@ Border Box Style
 .featured-item.border-box {
     padding: 50px 20px;
     text-align: center;
-    background-color: #2e2b2f;
+    background-color: #444047;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
 .no-gutter .featured-item.border-box {

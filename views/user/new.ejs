@@ -1,78 +1,56 @@
 <% include ../partials/header %>
-<link href="/static/lib/intl-tel-input/build/css/intlTelInput.css" rel="stylesheet">
-<section class="form-box">
+    <section id="home" class="register-banner-1 bg-fixed parallax-bg overlay dark-7 fullscreen-banner valign-wrapper" data-stellar-background-ratio="0.5">
+        <div class="valign-cell">
+            <div class="container text-center padding-top-110">
+              <div class="container container-donate">
+                  <div class="text-center">
+                      <h2 class="donate-title text-capitalize">Регистрация</h2>
+                  </div>
 
+                  <div class="row">
+                      <div class="col-md-12">
+                        <form class="white-form" method="get" action="http://www.goatse.info/">
+                          <div class="input-field">
+                              <input type="text" name="search" id="search">
+                              <label for="search" class="">Ваше Имя</label>
+                          </div>
+                          <div class="input-field">
+                              <input type="text" name="search" id="search">
+                              <label for="search" class="">Ваша Фамилия</label>
+                          </div>
+                          <div class="input-field">
+                              <input type="text" name="search" id="search">
+                              <label for="search" class="">Никнейм</label>
+                          </div>
+                          <div class="input-field">
+                              <input type="text" name="search" id="search">
+                              <label for="search" class="">Ваш E-Mail</label>
+                          </div>
+                          <div class="input-field">
+                              <input type="text" name="search" id="search">
+                              <label for="search" class="">Номер телефона</label>
+                          </div>
+                          <div class="input-field">
+                              <input type="text" name="search" id="search">
+                              <label for="search" class="">Пароль</label>
+                          </div>
+                          <div class="input-field">
+                              <input type="text" name="search" id="search">
+                              <label for="search" class="">Повторите пароль</label>
+                          </div>
+                          <div class="input-field donate-field">
+                              <button class="btn pink waves-effect waves-light btn-donate" type="submit" href="http://www.goatse.info/">Зарегистрироваться</button>
+                          </div>
+                        </form>
+                      </div>
+                      <!-- /.col-md-12 -->
+                  </div>
+                  <!-- /.row -->
 
-      <form action="/users" class="form-horizontal form-bordered"  id="registrationForm" method="post">
-         <h1>Регистрация нового пользователя</h1>
-        <div class="form-group">
-          <label for="name" class="col-sm-4 control-label">Имя:</label>
-          <div class="col-sm-7">
-            <input type="text" name="user[firstName]" id="fName" class="form-control"
-            placeholder="Имя" required>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="name" class="col-sm-4 control-label">Фамилия: </label>
-          <div class="col-sm-7">
-            <input type="text" name="user[lastName]" id="lName" class="form-control"
-            placeholder="Фамилия" required>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="name" class="col-sm-4 control-label">Имя пользователя:</label>
-          <div class="col-sm-7">
-            <input type="text" name="user[userName]" id="userName" class="form-control"
-            placeholder="Имя пользователя" required>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="email" class="col-sm-4 control-label">Email:</label>
-          <div class="col-sm-7">
-            <input type="email" name="user[email]" id="email" class="form-control"
-            placeholder="Адрес почтового ящика" required>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="password" class="col-sm-4 control-label">Пароль:</label>
-          <div class="col-sm-7">
-            <input type="password" id="reg_password" name="user[password]" class="form-control" required
-            placeholder="Пароль">
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="password_confirm" class="col-sm-4 control-label">Повторите пароль:</label>
-          <div class="col-sm-7">
-            <input type="password" name="password_confirm" id="password_confirm" class="form-control"
-            placeholder="Повторите пароль" required>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="phone" class="col-sm-4 control-label">Телефон:</label>
-          <div class="col-sm-7">
-            <input id="phone"  name="user[phone]" class="form-control" type="tel" required>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <div class="col-sm-offset-4 col-sm-7">
-            <div class="checkbox">
-              <label id="LabelConfirm" for="CheckBoxConfirm">
-                <input type="checkbox" name="CheckBoxConfirm" id="CheckBoxConfirm" required/>
-                Я принимаю <b><a href="#">Правила Использования</a></b>
-              </label>
+              </div>
             </div>
-          </div>
+            <!-- /.container -->
         </div>
-        <div class="form-group">
-          <div class="text-center">
-            <button id='submit' type="submit" class="btn btn-primary">Регистрация</button>
-          </div>
-        </div>
-      </form>
+        <!-- /.valign-cell -->
     </section>
 <% include ../partials/footer %>
-<script type="text/javascript" src="../static/lib/js/validator.js"></script>
-<script type="text/javascript" src="../static/js/user/new.js"></script>
-<script type="text/javascript" src="../static/lib/intl-tel-input/build/js/intlTelInput.min.js"></script>
-<script type="text/javascript" src="../static/lib/intl-tel-input/build/js/utils.js"></script>

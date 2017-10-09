@@ -4,7 +4,7 @@ Standard blog
 .post-wrapper {
 	padding: 16px;
 	border: 1px solid #dee8e6;
-    background-color: #2e2b2f;
+    background-color: #444047;
     -webkit-transition: all .25s;
     -moz-transition: all .25s;
     -ms-transition: all .25s;
@@ -1263,13 +1263,13 @@ Grid News Hover Style
 }
 .grid-news-hover .blog-content {
     padding: 20px 25px 0;
-    border: 1px solid #dee8e6;
     position: relative;
     overflow: hidden;
     -webkit-transition: border 0.4s;
     -moz-transition: border 0.4s;
     -ms-transition: border 0.4s;
     transition: border 0.4s;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 .grid-news-hover .post-wrapper:hover .blog-content {
     border: 1px solid;

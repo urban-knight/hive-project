@@ -1,50 +1,43 @@
 <% include ./partials/header %>
-<section class="form-box" style="width:70%">
-  <div class="row">
-    <div class="col-lg-12">
-      <h2 class="section-heading">Покупка внутриигровой валюты</h2>
-    </div>
-    <form  class="form-horizontal form-bordered" id="donate">
-      <div class="form-group" style="margin-bottom: 0">
-        <label for="name" class="col-sm-4 control-label">Имя пользователя:</label>
-        <div class="col-sm-6">
-          <input type="text" name="username" id="username" class="form-control" placeholder="Имя пользователя" value="<%=currentUser.username %>" required readonly>
-        </div>
-      </div>
-      <div class="form-group">
-        <div class="col-sm-offset-4 col-sm-6">
-          <div class="checkbox">
-            <label for="gift">
-              <input type="checkbox" id="gift">Сделать перевод для другого пользователя</label>
+
+    <section id="home" class="donate-banner-1 bg-fixed parallax-bg overlay dark-7 fullscreen-banner valign-wrapper" data-stellar-background-ratio="0.5">
+        <div class="valign-cell">
+            <div class="container text-center padding-top-110">
+              <div class="container container-donate">
+                  <div class="text-center">
+                      <h2 class="donate-title text-capitalize">Покупка валюты</h2>
+                  </div>
+
+                  <div class="row">
+                      <div class="col-md-12">
+                        <form action="#" class="white-form">
+                          <div class="input-field">
+                              <input type="text" name="search" id="search">
+                              <label for="search" class="">Логин</label>
+                          </div>
+                          <div class="input-field">
+                              <input type="text" name="search" id="search">
+                              <label for="search" class="">Сумма доната</label>
+                          </div>
+                          <div class="input-field">
+                              <input type="text" name="search" id="search">
+                              <label for="search" class="">Сумма игровой валюты</label>
+                          </div>
+                          <div class="input-field donate-field">
+                              <button class="btn pink waves-effect waves-light btn-donate" type="submit">Перейти к Оплате</button>
+                          </div>
+                        </form>
+                      </div>
+                      <!-- /.col-md-12 -->
+                  </div>
+                  <!-- /.row -->
+
+              </div>
             </div>
-          </div>
+            <!-- /.container -->
         </div>
-        <div class="form-group">
-         <label for="name" class="col-sm-4 control-label">Выберете суму доната и валюту:</label>
-         <div class="col-sm-6">
-          <div class="input-group" style="width: 100%">
-            <input type="number" id="money" name="money" placeholder="Сумма" class="form-control" style="width:30%">
-            <select class="form-control" id="curr" style="width:30%">
-              <option value="10">₽ RUB</option>
-              <option value="30">₴ UAH</option>
-              <option value="300">€ EUR</option>
-              <option value="250">$ USD</option>
-            </select>
+        <!-- /.valign-cell -->
+    </section>
 
-            <input type="number" id="virtualMoney"  class="form-control" placeholder="Игровая валюта"  style="width:40%" readonly >
-          </div>
-        </div>
-      </div>
-      <div class="form-group" style="margin-top: 20px;">
-        <div class="col-sm-offset-4 col-sm-6">
-          <button id='submit' type="submit" class="btn btn-primary"><i class="fa fa-credit-card" aria-hidden="true"></i> Перейти к оплате</button>
-        </div>
-      </div>
 
-    </form>
-  </div>
-
-</section>
 <% include ./partials/footer %>
-<script type="text/javascript" src="../static/js/donate.js"></script>
-<script type="text/javascript">var name = "<%=currentUser.username %>" ;</script>
