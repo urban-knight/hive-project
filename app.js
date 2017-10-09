@@ -19,6 +19,7 @@ var User = require('./models/user');
 
 var indexRouter = require("./routes/index"),
     userRouter = require("./routes/user"),
+    newsRouter = require("./routes/post"),
     emailVerificator = require("./routes/email-verificator");
 
 var indexAPI = require("./routes/api/index");
@@ -69,6 +70,7 @@ app.use(function(req, res, next){
 
 app.use("/", indexRouter);
 app.use("/users", userRouter);
+app.use("/news", newsRouter);
 app.use("/email-verification", emailVerificator);
 
 app.get("/*", function(req, res){

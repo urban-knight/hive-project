@@ -56,16 +56,6 @@ router.get("/store", function(req, res){
     res.render("store");
 });
 
-// News page
-router.get("/news", function(req, res){
-    res.render("news");
-});
-
-// News-detalis page
-router.get("/news-detalis", function(req, res){
-    res.render("news-detalis");
-});
-
 // MTA page
 router.get("/mta", function(req, res){
     res.render("mta");
