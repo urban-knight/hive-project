@@ -1,6 +1,6 @@
 var fs             = require('fs'),
     express        = require('express'), 
-    db             = require('./db.js'),
+    db             = require('./utils/db.js'),
     mongoose       = require('mongoose'),
     passport       = require('passport'),
     bodyParser     = require('body-parser'),
