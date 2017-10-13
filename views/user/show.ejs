@@ -1,49 +1,305 @@
 <% include ./../partials/header %>
-<section class="content-block" style="background: #333; border-radius: 10px;  margin-top:150px; padding: 20px" >
 
-  <div class="row">
-    <div class="col-sm-3" style="top: -50px;  width: 22%;">
-      <img width="200" src="/static/img/backgrounds/pepe.png" class="img-responsive img-circle img-thumbnail" >
-      <br><br>
-    <a class="btn btn-primary" href="user/edit"><i class="fa fa-pencil" aria-hidden="true"></i> Редактировать профиль</a>
+    <!-- //////////////////////////////////////////////////////////////////////////// -->
 
+    <!-- START CONTENT -->
+    <section id="content">
 
-    </div>
-    <div class="col-sm-9">
-      <h1 style="text-align: left; margin: 0; padding: 0; font-size: 36pt; border-bottom:1px dotted #fff;"><%=user.username %></h1>
-      <p>Мамкін бандіт</p><a style="right: 0; top: 0; position: absolute;" href="/logout"><i class="fa fa-sign-out" aria-hidden="true"></i> Выход</a>
-    </div>
-    </div>
+        <!--start container-profile-->
+        <div class="container-profile">
 
-  <div class="row">
-     <div class="col-sm-3" style="width: 22%;">
-<div class="panel panel-default">
-  <div class="panel-heading">Мои друзья</div>
-  <div class="panel-body">
-
-  <div class="row">
-                <div class="col-md-6">
-                        <img width='40' src="/static/img/team/kuznets.jpg" class="img-responsive img-circle">
-                        <p>Oleg</p>
+            <div id="profile-page" class="section">
+                <!-- profile-page-header -->
+                <div id="profile-page-header" class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="/static/img/user-profile-bg.jpg" alt="user background">
                     </div>
-<div class="col-md-6">
-                        <img width='40' src="/static/img/team/kuznets.jpg" class="img-responsive img-circle">
-                        <p>OlegKuznets</p>
-                    </div><div class="col-md-6">
-                        <img width='40' src="/static/img/team/kuznets.jpg" class="img-responsive img-circle">
-                        <p>OlegKuznets</p>
-                    </div><div class="col-md-6">
-                        <img width='40' src="/static/img/team/kuznets.jpg" class="img-responsive img-circle">
-                        <p>OlegKuznets</p>
+                    <figure class="card-profile-image m-avatar">
+                        <img src="/static/img/avatar.jpg" alt="profile image" class="circle z-depth-2 responsive-img activator avatar-border">
+                        <span class="online-status btn-floating"></span>
+                    </figure>
+                    <div class="card-content">
+                        <div class="row">
+                            <div class="col s3 offset-s2 nickname-m">
+                                <h4 class="card-title grey-text text-darken-4">Raketa_228</h4>
+                                <p class="medium-small grey-text">Никнейм</p>
+                            </div>
+                            <div class="col s1 right-align btn-setting">
+                                <a class="btn-floating activator waves-effect waves-light darken-2 right">
+                                    <i class="material-icons">settings</i>
+                                </a>
+                            </div>
+                            <div class="col s1 right-align btn-add">
+                                <a class="btn-floating activator waves-effect waves-light darken-2 right">
+                                    <i class="mdi-action-perm-identity"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
+                    <div class="card-reveal">
+                        <p>
+                            <span class="card-title grey-text text-darken-4">Roger Waters <i class="mdi-navigation-close right"></i></span>
+                            <span><i class="mdi-action-perm-identity cyan-text text-darken-2"></i> Project Manager</span>
+                        </p>
+
+                        <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+
+                        <p><i class="mdi-action-perm-phone-msg cyan-text text-darken-2"></i> +1 (612) 222 8989</p>
+                        <p><i class="mdi-communication-email cyan-text text-darken-2"></i> mail@domain.com</p>
+                        <p><i class="mdi-social-cake cyan-text text-darken-2"></i> 18th June 1990</p>
+                        <p><i class="mdi-device-airplanemode-on cyan-text text-darken-2"></i> BAR - AUS</p>
+                    </div>
+                    <div class="card-reveal">
+                            <form action="#" class="white-form">
+                              <span class="card-title grey-text text-darken-4">Поиск Друзей <i class="mdi-navigation-close right"></i></span>
+                                <div class="input-field">
+                                    <input type="text" name="search" id="search">
+                                    <label for="search" class="">Введите никнейм пользователя...</label>
+                                </div>
+                                        <div class="card-content text-center">
+                                          <button href="#" class="btn btn-lg">Искать</button>
+                                        </div>
+                            </form>
+                    </div>    
                 </div>
+                <!--/ profile-page-header -->
 
-  </div>
-</div>
+                <!-- profile-page-content -->
+                <div id="profile-page-content" class="row">
+                    <!-- profile-page-sidebar-->
+                    <div id="profile-page-sidebar" class="col s12 m4">
+                        <!-- Profile About  -->
+                        <div class="card light-blue">
+                            <div class="card-content white-text">
+                                <span class="card-title">Информация о пользователе</span>
+                                <p>Уровень 10 (4500/4800)</p>
+
+                                <div class="progress-section">
+                                    <div class="progress">
+                                        <div class="progress-bar brand-bg six-sec-ease-in-out" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+
+                                        </div>
+
+                                    </div>
+                                    <!-- /.progress -->
+                                </div>
+                                <!-- progress-section end -->
+                                <ul class="info-user">
+                                    <li class="collection-item">
+                                        <div class="row">
+                                            <div class="col s5 grey-text darken-1"><i class="mdi-social-person"></i> Имя</div>
+                                            <div class="col s7 grey-text text-darken-4 right-align">Ким Чен Ын</div>
+                                        </div>
+                                    </li>
+                                    <li class="collection-item">
+                                        <div class="row">
+                                            <div class="col s5 grey-text darken-1"><i class="mdi-image-filter-9-plus"></i> Возраст</div>
+                                            <div class="col s7 grey-text text-darken-4 right-align">20</div>
+                                        </div>
+                                    </li>
+                                    <li class="collection-item">
+                                        <div class="row">
+                                            <div class="col s5 grey-text darken-1"><i class="mdi-content-flag"></i> Страна</div>
+                                            <div class="col s7 grey-text text-darken-4 right-align">Северная Корея</div>
+                                        </div>
+                                    </li>
+                                    <li class="collection-item">
+                                        <div class="row">
+                                            <div class="col s5 grey-text darken-1"><i class="mdi-action-grade"></i> Статус</div>
+                                            <div class="col s7 grey-text text-darken-4 right-align">HeadHunter</div>
+                                        </div>
+                                    </li>
+                                    <li class="collection-item">
+                                        <div class="row">
+                                            <div class="col s5 grey-text darken-1"><i class="mdi-av-timer"></i> Дата регистрации</div>
+                                            <div class="col s7 grey-text text-darken-4 right-align">1.1.2018</div>
+                                        </div>
+                                    </li>
+                                    <li class="collection-item">
+                                        <div class="row premium-status">
+                                            <div class="grey-text text-darken-4 right-center">PREMIUM (Осталось <span>30</span> Дней)</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Profile About  -->
+
+                        <!-- Profile About Details  -->
+
+                        <!-- Profile feed  -->
+
+                        <ul id="profile-page-about-feed" class="collection pos-info z-depth-1 col-md-12">
+                            <li class="collection-item avatar position-info col-md-6">
+                                <img src="/static/img/kimirsen.jpg" alt="" class="circle" height="50">
+                                <span class="friend-title">Ким Ир Сен</span>
+                                <span class="friend-title2 title-status2">Offline</span>
+                            </li>
+                            <li class="collection-item position-info avatar col-md-6">
+                                <img src="/static/img/kimchenir.jpg" alt="" class="circle" height="50">
+                                <span class="friend-title">Ким Чен Ир</span>
+                                <span class="friend-title2 title-status2">Offline</span>
+                            </li>
+                            <li class="collection-item position-info avatar col-md-6">
+                                <img src="/static/img/trump.jpg" alt="" class="circle" height="50">
+                                <span class="friend-title">Дональд Трамп</span>
+                                <span class="friend-title2 title-status">Online</span>
+                            </li>
+                            <li class="collection-item position-info avatar col-md-6">
+                                <img src="/static/img/putin.jpg" alt="" class="circle" height="50">
+                                <span class="friend-title">Владимир Путин</span>
+                                <span class="friend-title2 title-status2">Offline</span>
+                            </li>
+
+                        </ul>
+                        <!-- Profile feed  -->
+
+                    </div>
+                    <!-- profile-page-sidebar-->
+
+                    <!-- profile-page-wall -->
+                    <div id="profile-page-wall" class="col s12 m8">
+                        <!-- profile-page-wall-share -->
+                        <div id="profile-page-wall-share" class="row">
+                            <div class="col s12">
+                                <ul class="tabs tab-profile z-depth-1 light-blue">
+                                    <li class="tab col s3"><a class="white-text waves-effect waves-light active" href="#achievments"><i class="mdi-action-stars"></i> Достижения</a>
+                                    </li>
+                                    <li class="tab col s3"><a class="white-text waves-effect waves-light" href="#inventory"><i class="mdi-image-colorize"></i> Инвентарь</a>
+                                    </li>
+                                    <li class="tab col s3"><a class="white-text waves-effect waves-light" href="#finance"><i class="mdi-editor-attach-money"></i> Финансы</a>
+                                    </li>
+                                </ul>
+
+                                <div id="achievments" class="tab-content">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                          <div class="card">
+                                            <div class="card-image">
+                                              <img src="/static/img/sample-1.jpg">
+                                              <h1 class="card-title">Multi Theft Auto</h1>
+                                              <a class="btn-floating halfway-fab waves-effect waves-light card-name-lib activator grey-text text-darken-4"><i class="material-icons">arrow_drop_up</i></a>
+                                            </div>
+                                            <div class="card-content">
+                                              <p class="activity-title">Активность: 100 Часов</p>
+                                            </div>
+                                                <div class="card-reveal">
+                                                  <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                                                  <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                                                </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                          <div class="card">
+                                            <div class="card-image">
+                                              <img src="/static/img/sample-1.jpg">
+                                              <h1 class="card-title">HiveCraft</h1>
+                                              <a class="btn-floating halfway-fab waves-effect waves-light card-name-lib activator grey-text text-darken-4"><i class="material-icons">arrow_drop_up</i></a>
+                                            </div>
+                                            <div class="card-content">
+                                              <p class="activity-title">Активность: 100 Часов</p>
+                                            </div>
+                                                <div class="card-reveal">
+                                                  <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                                                  <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                                                </div>
+                                          </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="inventory" class="tab-content">
+                                  <div class="row">
+                                    <div class="col-lg-4 col-md-4 col-sm-12 col-sm-12">
+                                      <div class="card">
+                                        <div class="card-image">
+                                          <img src="/static/img/sample-1.jpg">
+                                          <span class="card-title">MiniGun: Vendetta</span>
+                                        </div>
+                                        <div class="card-content">
+                                          <button href="#" class="btn btn-lg">Надеть</button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-12 col-sm-12">
+                                      <div class="card">
+                                        <div class="card-image">
+                                          <img src="/static/img/sample-1.jpg">
+                                          <span class="card-title">Rocket Launcher</span>
+                                        </div>
+                                        <div class="card-content">
+                                          <button href="#" class="btn btn-lg">Надеть</button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-12 col-sm-12">
+                                      <div class="card">
+                                        <div class="card-image">
+                                          <img src="/static/img/sample-1.jpg">
+                                          <span class="card-title">AK-47</span>
+                                        </div>
+                                        <div class="card-content">
+                                          <button href="#" class="btn btn-lg">Надеть</button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div id="finance" class="tab-content col s12 grey lighten-4">
+                                    <div class="row">
+                                        <div class="col s12">
+                                          <div class="row text-center facts-two" id="count3">
+                                              <div class="col-sm-4 counter-wrap">
+                                                <i class="material-icons brand-color money-color">&#xE90F;</i>
+                                                <span class="timer money-num">1000</span>
+                                                <span class="count-description">RUB</span>
+                                              </div> <!-- /.col-sm-3 -->
+
+                                              <div class="col-sm-4 counter-wrap">
+                                                <i class="material-icons brand-color money-color">&#xE863;</i>
+                                                <span class="timer money-num">9999</span>
+                                                <span class="count-description">Hive $</span>
+                                              </div><!-- /.col-sm-3 -->
+
+                                              <div class="col-sm-4 counter-wrap">
+                                                <i class="material-icons brand-color money-color">&#xE8F8;</i>
+                                                <span class="timer money-num">200</span>
+                                                <span class="count-description">Hive Coins</span>
+                                              </div><!-- /.col-sm-3 -->
+
+                                              <div class="col-md-12">
+                                                <p class="text-center">Ниже Вы можете пересмотреть историю своих покупок или пополнить свой денежный баланс</p>
+                                                  <div class="card-content">
+                                                    <a href="#" class="btn btn-lg shop-history">История Покупок</a>
+                                                    <a href="/donate" class="btn btn-lg replenishment">Пополнить Счет</a>
+                                                  </div>
+                                              </div>
+                                          </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/ profile-page-wall-share -->
+
+                    </div>
+                    <!--/ profile-page-wall -->
+
+                </div>
+            </div>
+        </div>
+        </div>
+        <!--end container-profile-->
+
+    </section>
+    <!-- END CONTENT -->
+
     </div>
-  </div>
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  <br>
-</section>
+    <!-- END WRAPPER -->
 
-<% include ./../partials/footer %>
+    </div>
+    <!-- END MAIN -->
+
+    <% include ./../partials/footer %>

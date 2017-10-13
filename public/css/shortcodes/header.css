@@ -851,6 +851,11 @@ Responsive Menu
   
 @media screen and (max-width: 768px) {
 
+    .logo-brand img {
+        margin-top: -8px;
+        margin-bottom: 8px;
+    }
+
     .tt-nav {
         top:0;
     }
@@ -870,6 +875,7 @@ Responsive Menu
     }
 
     .has-header-search .menuzord-responsive .showhide {
+        margin-top: 14px;
         margin-right: 40px;
     }
 
@@ -1003,7 +1009,7 @@ Responsive Menu
     .light.menuzord-menu > li > a > i, 
     .tt-nav .dark-header .menuzord-menu > li > a, 
     .tt-nav .dark-header .menuzord-menu > li > a > i {
-        color: #333;
+        color: #dee8e6;
     }
 
     .tt-nav.sticky .menuzord-menu>li>a {
@@ -1026,9 +1032,6 @@ Responsive Menu
         z-index: 1200;
     }
 
-    .tt-nav .light-header {
-        border-bottom: 1px solid #f5f5f5;
-    }
 
     .tt-nav li.nav-icon .indicator {
         display: block;
@@ -1069,9 +1072,6 @@ Responsive Menu
     }
 
 
-    ul.menuzord-menu {
-        background: #fff;
-    }
 
     .tt-nav.nav-center-align .logo-brand {
         line-height: 40px;

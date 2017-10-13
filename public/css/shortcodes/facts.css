@@ -12,12 +12,12 @@ Count Up
     font-weight: 500;
 }
 .counter-wrap {
-    padding: 120px 0;
+    padding: 120px 60px 20px 60px;
 }
 
 @media screen and (max-width: 767px) {
 	.counter-wrap {
-	    padding: 60px 0;
+	    padding: 10px 10px 10px 10px;
 	}
 }
 
@@ -25,18 +25,18 @@ Count Up
 
 .facts-two .counter-wrap {}
 .facts-two .counter-wrap .material-icons{
-    font-size: 50px;
+    font-size: 40px;
 }
 .facts-two .timer {
     display: block;
-    font-size: 66px;
-    line-height: 70px;
+    font-size: 46px;
+    line-height: 50px;
     font-weight: 500;
     margin-bottom: 10px;
-    color: #4b4b4b;
+    color: #dee8e6;
 }
 .facts-two .count-description {
-    font-size: 14px;
+    font-size: 18px;
     text-transform: uppercase;
 }
 

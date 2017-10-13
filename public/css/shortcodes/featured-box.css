@@ -410,6 +410,7 @@ Border Box Style
 -----------------------------------------------------------------*/
 
 .featured-item.border-box {
+    color: #dee8e6;
     padding: 50px 20px;
     text-align: center;
     background-color: #444047;
@@ -420,6 +421,9 @@ Border Box Style
     margin-left: -1px;
 }
 
+.featured-item.border-box:hover h2 {
+    color: #2e2b2f !important;
+}
 
 .featured-item.border-box h2 {
     color: #dee8e6;
@@ -427,11 +431,10 @@ Border Box Style
 }
 .featured-item.border-box:hover h2,
 .featured-item.border-box:hover .icon {
-    color: #fff;
+    color: #2e2b2f;
 }
 .featured-item.border-box:hover {
-    color: #fff;
-    border: 1px solid transparent;
+    color: #2e2b2f;
     box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 

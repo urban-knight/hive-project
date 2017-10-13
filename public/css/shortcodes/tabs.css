@@ -4,6 +4,7 @@ Tab Common CSS
 
 .nav-tabs>li>a,
 .nav-tabs.nav-justified>li>a {
+    border: none;
     font-weight: 500;
     text-transform: uppercase;
     color: #dee8e6;
@@ -18,23 +19,22 @@ Tab Common CSS
 .nav-tabs.nav-justified>.active>a, 
 .nav-tabs.nav-justified>.active>a:focus, 
 .nav-tabs.nav-justified>.active>a:hover{
+    border: none;
     cursor: default;
     background-color: #fff;
 }
 
-.nav-tabs {
-    border-bottom: 1px solid #eee;
-}
 
 .nav-tabs>li i {
     margin-right: 5px;
 }
 .nav-tabs>li>a {
+    border: none;
     padding: 20px 30px;
 }
 .nav-tabs>li>a:hover {
-    background-color: #fff;
-    border-color: #eee #eee #eee;
+    border: none;
+    background-color: #f25f38;
 }
 .tab-pane {
     color: #dee8e6;

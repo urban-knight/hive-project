@@ -68,6 +68,7 @@ White Form Style
 .white-form input[type=number], 
 .white-form input[type=search], 
 .white-form textarea.materialize-textarea {
+	padding-bottom: 12px;
     color: #fff;
 }
 

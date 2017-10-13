@@ -57,12 +57,12 @@ router.get("/store", function(req, res){
 });
 
 // MTA page
-router.get("/mta", function(req, res){
+router.get("/library/mta", function(req, res){
     res.render("mta");
 });
 
 // HiveCraft page
-router.get("/hivecraft", function(req, res){
+router.get("/library/hivecraft", function(req, res){
     res.render("hivecraft");
 });
 

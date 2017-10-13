@@ -1,0 +1,179 @@
+
+a {
+    color: #ffba08;
+}
+a:focus,
+a:hover {
+    color: #f25f38;
+}
+
+.reg-link2:hover {
+    color: #f25f38;
+}
+
+/*button style*/
+.btn {
+    font-size: 16px;
+    background-color: #ffba08;
+}
+
+.btn-large,
+.btn-floating {
+    background-color: #ffba08;
+}
+
+.btn:hover,
+.btn:focus,
+.btn-large:hover {
+    background-color: #f25f38;
+}
+
+.btn-connect {
+    font-size: 20px !important;
+}
+
+
+
+
+
+/* ============= Color Presets ================ */
+.brand-color,
+.brand-icon,
+.search-trigger i:hover,
+.copy-text, 
+.copy-text a:hover,
+.footer-four .social-link li a i:hover,
+.footer-four .secondary-footer ul li a:hover,
+.flex-direction-nav a:before {
+    color: #ffba08 !important;
+}
+.brand-color.darken-2 {
+    color: #996d36 !important;
+}
+
+.brand-bg,
+.brand-hover:hover,
+.grid-news-hover .post-date {
+    background-color: #ffba08 !important;
+}
+.brand-bg.darken-2 {
+    background-color: #bd8949 !important;
+}
+
+
+.dark-bg {
+    background-color: #120d07 !important;
+}
+.dark-bg.lighten-1 {
+    background-color: #2e2b2f !important;
+}
+
+
+.active-search .search-trigger .search-btn {
+    background-color: rgb(2, 2, 2);
+}
+
+
+/*general css for coffee shop*/
+.logo-brand {
+    font-family: 'Great Vibes', cursive;
+    font-size: 30px;
+    margin: 1px 30px 0 0;
+}
+.logo-brand,
+.logo-brand:hover {
+    color: #fff;
+}
+
+.tt-nav.sticky .logo-brand {
+    color: #202020;
+    margin: 1px 30px 0 0;
+    line-height: 60px;
+}
+
+@media screen and (max-width: 768px) {
+    .menuzord-responsive .logo-brand {
+        margin: 10px 0 0;
+        color: #202020;
+    }
+}
+
+/* ======== Navigation ============ */
+.menuzord .menuzord-menu>li.active>a, 
+.menuzord .menuzord-menu>li.active>a>i, 
+.menuzord .menuzord-menu>li:hover>a, 
+.menuzord .menuzord-menu>li:hover>a>i {
+    color: #ffba08 !important;
+}
+.menuzord-menu ul.dropdown li:hover>a, 
+.menuzord-menu ul.dropdown li.active>a, 
+.menuzord-menu>li>.megamenu .megamenu-row li:hover>a {
+    color: #ffba08;
+}
+.menuzord-menu ul.dropdown li >a::before, 
+.menuzord-menu>li>.megamenu .megamenu-row li >a::before {
+    background-color: #ffba08;
+}
+.nav-border-bottom .menuzord .menuzord-menu>li.active>a, 
+.nav-border-bottom .menuzord .menuzord-menu>li:hover>a {
+    border-bottom: 3px solid #ffba08;
+}
+.menuzord-menu>li {
+    margin-left: 15px;
+}
+
+
+.grid-news-hover .post-wrapper:hover .blog-content {
+    border-color: #ffba08;
+}
+.border-right {
+    border-right: 1px solid #383837;
+}
+
+.subscribe-wrapper .input-field {
+    width: 70%;
+    float: left;
+    margin-top: 18px;
+}
+
+@media screen and (max-width: 600px) {
+    .subscribe-wrapper .input-field {
+        width: 100%;
+        float: none;
+    }
+}
+
+
+
+/*
+background banner images
+------------------------------------------------------------*/
+.gta-banner {
+    background-image: url("../img/index/gta-banner-1.jpg");  
+}
+
+.donate-banner {
+    background-image: url("../img/index/donate-img.jpg");   
+}
+
+.register-banner-1 {
+    background-image: url("../img/index/register-banner.jpg");   
+}
+
+.minecraft-banner-2 {
+    background-image: url("../img/index/minecraft-banner-2.jpg");
+}
+
+
+.minecraft-banner {
+    background-image: url("../img/index/minecraft-banner.jpg");
+}
+
+.support-banner {
+    background-image: url("../img/index/support-banner.jpg");
+}
+
+.project-banner {
+    background-image: url("../img/index/project-banner.jpg");
+}
+
